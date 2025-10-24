@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2025-10-23T14:20:17.015830",
+    "user_id": "user_001",
+    "ejercicio": "Press Banca",
+    "series": 10,
+    "repeticiones": 10,
+    "peso_kg": 100.0
+  },
+  {
+    "timestamp": "2025-10-23T14:20:46.103707",
+    "user_id": "user_001",
+    "ejercicio": "Sentadilla",
+    "series": 5,
+    "repeticiones": 20,
+    "peso_kg": 100.0
+  }
+]

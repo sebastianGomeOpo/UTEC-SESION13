@@ -1,0 +1,16 @@
+{
+  "user_id": "default",
+  "name": "Usuario",
+  "level": "principiante",
+  "workout_count": 0,
+  "objetivo": "hipertrofia",
+  "frecuencia_semanal": 4,
+  "ejercicios_favoritos": [
+    "Press banca",
+    "Sentadilla",
+    "Peso muerto"
+  ],
+  "restricciones": [],
+  "created_at": "2025-10-22",
+  "last_login": "2025-10-22"
+}

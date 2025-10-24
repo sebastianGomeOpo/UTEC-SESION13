@@ -1,0 +1,18 @@
+{
+  "user_id": "user_001",
+  "name": "Juan",
+  "level": "intermedio",
+  "workout_count": 15,
+  "objetivo": "fuerza",
+  "frecuencia_semanal": 5,
+  "ejercicios_favoritos": [
+    "Sentadilla",
+    "Press banca",
+    "Dominadas"
+  ],
+  "restricciones": [
+    "rodilla izquierda"
+  ],
+  "created_at": "2024-08-15",
+  "last_login": "2025-10-22"
+}
