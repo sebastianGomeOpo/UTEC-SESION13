@@ -59,3 +59,9 @@ urllib3==2.5.0
 xxhash==3.6.0
 yarl==1.22.0
 zstandard==0.25.0
+
+
+# RAG Dependencies 
+chromadb==0.4.22
+pypdf==4.0.0
+

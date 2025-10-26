@@ -38,5 +38,13 @@
     "series": 10,
     "repeticiones": 10,
     "peso_kg": 80.0
+  },
+  {
+    "timestamp": "2025-10-25T17:44:35.681224",
+    "user_id": "default",
+    "ejercicio": "Press Banca",
+    "series": 1,
+    "repeticiones": 5,
+    "peso_kg": 100.0
   }
 ]

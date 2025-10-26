@@ -143,3 +143,14 @@ class Config:
             raise ValueError("❌ OPENAI_API_KEY no está configurada en .env")
         
         print(f"✅ Config cargada: Usuario '{self.USER_NAME}' ({self.user_id})")
+
+# Nuevo contenido a insertar (como atributos de clase estáticos)
+
+    # RAG Configuration (Phase 0 Migration)
+    BOOK_PATH = BASE_DIR / "data" / "books" / "entrenamiento.pdf"
+    CHROMA_DIR = BASE_DIR / "data" / "chroma_db"
+
+    # LLM Models (Phase 0 Migration)
+    LLM_MODEL_EXTRACT = "gpt-4o-mini"
+    LLM_MODEL_ASSEMBLE = "gpt-4o-mini"
+    LLM_TEMPERATURE = 0.0
