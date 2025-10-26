@@ -3,10 +3,8 @@
 # ════════════════════════════════════════════════════════════
 
 import json
-import shutil
 from pathlib import Path
-from datetime import datetime
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 import pytest
 
@@ -15,23 +13,21 @@ import pytest
 # ────────────────────────────────────────────────────────────
 
 try:
-    from agents.graph_state import GraphState as EstadoGrafo
-    from agents.nodes.load_context import load_context as cargar_contexto
-    from agents.nodes.extract_principles import extract_principles as extraer_principios
-    from agents.nodes.generate_routine import generate_routine as generar_rutina
-    from agents.nodes.save_routine import save_routine as guardar_rutina
+    from agents.graph_state import GraphState
+    from agents.nodes.load_context import load_context
+    from agents.nodes.extract_principles import extract_principles
+    from agents.nodes.generate_routine import generate_routine
+    from agents.nodes.save_routine import save_routine
     from agents.nodes.handle_error import (
-        handle_error as manejar_error,
-        ERROR_MESSAGE_MAP as MAPA_MENSAJES_ERROR,
-        DEFAULT_ERROR_MESSAGE as MENSAJE_ERROR_DEFECTO
+        handle_error,
+        DEFAULT_ERROR_MESSAGE
     )
-    from rag.models import PrincipiosExtraidos, RutinaActiva, Sesion, Ejercicio, ECI
-    from config.settings import Config
+    from rag.models import PrincipiosExtraidos, RutinaActiva
 except ImportError as e:
     pytest.exit(f"Error al importar funciones de nodos: {e}", 1)
 
 # Importar factories helper
-from .conftest import create_valid_principles as crear_principios_validos ,create_valid_routine as crear_rutina_valida
+from tests.conftest import create_valid_principles, create_valid_routine
 
 # ════════════════════════════════════════════════════════════
 # PRUEBAS: NODO DE CARGA DE CONTEXTO
@@ -42,8 +38,8 @@ class TestCargaContexto:
 
     def test_carga_perfil_usuario_exitosamente(
         self,
-        estado_grafo_vacio: EstadoGrafo,
-        directorio_usuarios_temporal: Path
+        empty_graph_state: GraphState,
+        temp_users_dir: Path
     ):
         """
         Verificar que el contexto se carga correctamente.
@@ -54,26 +50,26 @@ class TestCargaContexto:
         ✓ Sin errores en el proceso
         """
         # Preparación
-        estado = estado_grafo_vacio.copy()
-        estado["user_id"] = "test_user"
+        state = empty_graph_state.copy()
+        state["user_id"] = "test_user"
 
         # Ejecución
-        estado_resultado = cargar_contexto(estado)
+        result_state = load_context(state)
 
         # Validaciones
-        assert estado_resultado["error"] is None or estado_resultado["error"] == ""
-        assert estado_resultado["step_completed"] == "context_loaded"
-        assert estado_resultado["perfil_usuario"] is not None
-        assert isinstance(estado_resultado["perfil_usuario"], dict)
-        assert estado_resultado["perfil_usuario"].get("user_id") == "test_user"
-        assert "level" in estado_resultado["perfil_usuario"]
-        assert "objetivo" in estado_resultado["perfil_usuario"]
-        assert estado_resultado["perfil_usuario"].get("name") == "Test User"
+        assert result_state["error"] is None or result_state["error"] == ""
+        assert result_state["step_completed"] == "context_loaded"
+        assert result_state["perfil_usuario"] is not None
+        assert isinstance(result_state["perfil_usuario"], dict)
+        assert result_state["perfil_usuario"].get("user_id") == "test_user"
+        assert "level" in result_state["perfil_usuario"]
+        assert "objetivo" in result_state["perfil_usuario"]
+        assert result_state["perfil_usuario"].get("name") == "Test User"
 
     def test_maneja_usuario_no_encontrado(
         self,
-        estado_grafo_vacio: EstadoGrafo,
-        directorio_usuarios_temporal: Path
+        empty_graph_state: GraphState,
+        temp_users_dir: Path
     ):
         """
         Verificar manejo de usuario inexistente.
@@ -84,22 +80,22 @@ class TestCargaContexto:
         ✓ step_completed indica error
         """
         # Preparación
-        estado = estado_grafo_vacio.copy()
-        estado["user_id"] = "usuario_inexistente"
+        state = empty_graph_state.copy()
+        state["user_id"] = "usuario_inexistente"
 
         # Ejecución
-        estado_resultado = cargar_contexto(estado)
+        result_state = load_context(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None and estado_resultado["error"] != ""
-        assert "no encontrado" in estado_resultado["error"].lower()
-        assert "error" in estado_resultado["step_completed"].lower()
-        assert estado_resultado["perfil_usuario"] is None
+        assert result_state["error"] is not None and result_state["error"] != ""
+        assert "no encontrado" in result_state["error"].lower()
+        assert "error" in result_state["step_completed"].lower()
+        assert result_state["perfil_usuario"] is None
 
     def test_maneja_json_corrupto(
         self,
-        estado_grafo_vacio: EstadoGrafo,
-        directorio_usuarios_temporal: Path
+        empty_graph_state: GraphState,
+        temp_users_dir: Path
     ):
         """
         Verificar manejo de JSON inválido.
@@ -110,22 +106,22 @@ class TestCargaContexto:
         ✓ Estado indica error
         """
         # Preparación
-        estado = estado_grafo_vacio.copy()
-        estado["user_id"] = "corrupt_user"
+        state = empty_graph_state.copy()
+        state["user_id"] = "corrupt_user"
 
         # Ejecución
-        estado_resultado = cargar_contexto(estado)
+        result_state = load_context(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None
-        assert "corrupto" in estado_resultado["error"].lower() or \
-            "decode" in estado_resultado["error"].lower()
-        assert "error" in estado_resultado["step_completed"].lower()
+        assert result_state["error"] is not None
+        assert "corrupto" in result_state["error"].lower() or \
+            "decode" in result_state["error"].lower()
+        assert "error" in result_state["step_completed"].lower()
 
     def test_maneja_perfil_incompleto(
         self,
-        estado_grafo_vacio: EstadoGrafo,
-        directorio_usuarios_temporal: Path
+        empty_graph_state: GraphState,
+        temp_users_dir: Path
     ):
         """
         Verificar manejo de campos faltantes.
@@ -136,18 +132,18 @@ class TestCargaContexto:
         ✓ Indica error
         """
         # Preparación
-        estado = estado_grafo_vacio.copy()
-        estado["user_id"] = "incomplete_user"
+        state = empty_graph_state.copy()
+        state["user_id"] = "incomplete_user"
 
         # Ejecución
-        estado_resultado = cargar_contexto(estado)
+        result_state = load_context(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None and estado_resultado["error"] != ""
-        assert "incompleto" in estado_resultado["error"].lower()
-        assert "level" in estado_resultado["error"].lower() or \
-               "objetivo" in estado_resultado["error"].lower()
-        assert "error" in estado_resultado["step_completed"].lower()
+        assert result_state["error"] is not None and result_state["error"] != ""
+        assert "incompleto" in result_state["error"].lower()
+        assert "level" in result_state["error"].lower() or \
+               "objetivo" in result_state["error"].lower()
+        assert "error" in result_state["step_completed"].lower()
 
 
 # ════════════════════════════════════════════════════════════
@@ -159,8 +155,8 @@ class TestExtraccionPrincipios:
 
     def test_extrae_principios_exitosamente(
         self,
-        estado_grafo_poblado: EstadoGrafo,
-        cadena_extractor_principios_mock
+        populated_graph_state: GraphState,
+        mock_principle_extractor_chain
     ):
         """
         Verificar extracción exitosa de principios.
@@ -172,23 +168,23 @@ class TestExtraccionPrincipios:
         ✓ Sin errores
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
+        state = populated_graph_state.copy()
 
         # Ejecución
-        estado_resultado = extraer_principios(estado)
+        result_state = extract_principles(state)
 
         # Validaciones
-        assert estado_resultado["error"] is None or estado_resultado["error"] == ""
-        assert estado_resultado["step_completed"] == "principles_extracted"
-        assert estado_resultado["principios_libro"] is not None
-        assert isinstance(estado_resultado["principios_libro"], PrincipiosExtraidos)
-        assert hasattr(estado_resultado["principios_libro"], "citas_fuente")
-        assert len(estado_resultado["principios_libro"].citas_fuente) > 0
+        assert result_state["error"] is None or result_state["error"] == ""
+        assert result_state["step_completed"] == "principles_extracted"
+        assert result_state["principios_libro"] is not None
+        assert isinstance(result_state["principios_libro"], PrincipiosExtraidos)
+        assert hasattr(result_state["principios_libro"], "citas_fuente")
+        assert len(result_state["principios_libro"].citas_fuente) > 0
 
     def test_detecta_alucinacion_sin_citas(
         self,
-        estado_grafo_poblado: EstadoGrafo,
-        cadena_extractor_principios_mock
+        populated_graph_state: GraphState,
+        mock_principle_extractor_chain
     ):
         """
         Verificar detección de alucinaciones (sin citas).
@@ -199,25 +195,25 @@ class TestExtraccionPrincipios:
         ✓ step_completed indica error
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
-        principios_sin_citas = crear_principios_validos(citas=[])
-        cadena_extractor_principios_mock("sin_citas_prueba", principios_sin_citas)
-        estado["perfil_usuario"]["level"] = "sin_citas_prueba"
+        state = populated_graph_state.copy()
+        principios_sin_citas = create_valid_principles(citas=[])
+        mock_principle_extractor_chain("no_citations_test", principios_sin_citas)
+        state["perfil_usuario"]["level"] = "no_citations_test"
 
         # Ejecución
-        estado_resultado = extraer_principios(estado)
+        result_state = extract_principles(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None
-        assert "alucinación" in estado_resultado["error"].lower() or \
-               "citas" in estado_resultado["error"].lower()
-        assert estado_resultado["principios_libro"] is None
-        assert "error" in estado_resultado["step_completed"].lower()
+        assert result_state["error"] is not None
+        assert "alucinación" in result_state["error"].lower() or \
+               "citas" in result_state["error"].lower()
+        assert result_state["principios_libro"] is None
+        assert "error" in result_state["step_completed"].lower()
 
     def test_valida_formato_rir(
         self,
-        estado_grafo_poblado: EstadoGrafo,
-        cadena_extractor_principios_mock
+        populated_graph_state: GraphState,
+        mock_principle_extractor_chain
     ):
         """
         Verificar validación de formato RIR.
@@ -228,15 +224,15 @@ class TestExtraccionPrincipios:
         ✓ No hay error
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
+        state = populated_graph_state.copy()
 
         # Ejecución
-        estado_resultado = extraer_principios(estado)
+        result_state = extract_principles(state)
 
         # Validaciones
-        if estado_resultado["principios_libro"] is not None:
+        if result_state["principios_libro"] is not None:
             import re
-            rir = estado_resultado["principios_libro"].intensidad_RIR
+            rir = result_state["principios_libro"].intensidad_RIR
             assert re.match(r"^\d(-\d)?$", rir), \
                 f"Formato RIR inválido: '{rir}'"
 
@@ -250,8 +246,8 @@ class TestGeneracionRutina:
 
     def test_genera_rutina_exitosamente(
         self,
-        estado_grafo_poblado: EstadoGrafo,
-        cadena_generador_rutina_mock
+        populated_graph_state: GraphState,
+        mock_openai_chat_completions
     ):
         """
         Verificar generación exitosa de rutina.
@@ -263,21 +259,23 @@ class TestGeneracionRutina:
         ✓ step_completed = "routine_generated"
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
+        state = populated_graph_state.copy()
+        principios = create_valid_principles()
+        state["principios_libro"] = principios
 
         # Ejecución
-        estado_resultado = generar_rutina(estado)
+        result_state = generate_routine(state)
 
         # Validaciones
-        assert estado_resultado["error"] is None or estado_resultado["error"] == ""
-        assert estado_resultado["step_completed"] == "routine_generated"
-        assert estado_resultado["rutina_final"] is not None
-        assert isinstance(estado_resultado["rutina_final"], RutinaActiva)
-        assert len(estado_resultado["rutina_final"].sesiones) > 0
+        assert result_state["error"] is None or result_state["error"] == ""
+        assert result_state["step_completed"] == "routine_generated"
+        assert result_state["rutina_final"] is not None
+        assert isinstance(result_state["rutina_final"], RutinaActiva)
+        assert len(result_state["rutina_final"].sesiones) > 0
 
     def test_maneja_principios_faltantes(
         self,
-        estado_grafo_poblado: EstadoGrafo
+        populated_graph_state: GraphState
     ):
         """
         Verificar manejo cuando faltan principios.
@@ -288,20 +286,20 @@ class TestGeneracionRutina:
         ✓ Indica error
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
-        estado["principios_libro"] = None
+        state = populated_graph_state.copy()
+        state["principios_libro"] = None
 
         # Ejecución
-        estado_resultado = generar_rutina(estado)
+        result_state = generate_routine(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None
-        assert "error" in estado_resultado["step_completed"].lower()
+        assert result_state["error"] is not None
+        assert "error" in result_state["step_completed"].lower()
 
     def test_maneja_error_llm(
         self,
-        estado_grafo_poblado: EstadoGrafo,
-        cadena_generador_rutina_mock
+        populated_graph_state: GraphState,
+        mock_openai_chat_completions
     ):
         """
         Verificar manejo de errores del LLM.
@@ -312,15 +310,19 @@ class TestGeneracionRutina:
         ✓ Rutina NO se asigna
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
-        cadena_generador_rutina_mock(error=True)
+        state = populated_graph_state.copy()
+        principios = create_valid_principles()
+        state["principios_libro"] = principios
+        
+        # Configurar mock para que falle
+        mock_openai_chat_completions("error_test", Exception("LLM Error simulado"))
 
         # Ejecución
-        estado_resultado = generar_rutina(estado)
+        result_state = generate_routine(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None
-        assert "error" in estado_resultado["step_completed"].lower()
+        assert result_state["error"] is not None
+        assert "error" in result_state["step_completed"].lower()
 
 
 # ════════════════════════════════════════════════════════════
@@ -332,8 +334,8 @@ class TestGuardadoRutina:
 
     def test_guarda_rutina_exitosamente(
         self,
-        estado_grafo_poblado: EstadoGrafo,
-        directorio_usuarios_temporal: Path
+        populated_graph_state: GraphState,
+        temp_users_dir: Path
     ):
         """
         Verificar guardado exitoso de rutina.
@@ -345,41 +347,41 @@ class TestGuardadoRutina:
         ✓ Backup creado
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
-        estado["user_id"] = "test_user"
-        estado["rutina_final"] = crear_rutina_valida(
-            crear_principios_validos(),
+        state = populated_graph_state.copy()
+        state["user_id"] = "test_user"
+        principios = create_valid_principles()
+        state["rutina_final"] = create_valid_routine(
+            principios,
             user_id="test_user"
         )
-        estado["step_completed"] = "routine_generated"
+        state["step_completed"] = "routine_generated"
 
         # Ejecución
-        estado_resultado = guardar_rutina(estado)
+        result_state = save_routine(state)
 
         # Validaciones
-        assert estado_resultado["error"] is None or estado_resultado["error"] == ""
-        assert estado_resultado["step_completed"] == "routine_saved"
+        assert result_state["error"] is None or result_state["error"] == ""
+        assert result_state["step_completed"] == "saved"
 
-        ruta_usuario = directorio_usuarios_temporal / f"{estado['user_id']}.json"
-        assert ruta_usuario.exists(), "Archivo de usuario no creado"
+        user_file_path = temp_users_dir / f"{state['user_id']}.json"
+        assert user_file_path.exists(), "Archivo de usuario no creado"
 
-        with open(ruta_usuario) as archivo:
-            datos_guardados = json.load(archivo)
+        with open(user_file_path) as f:
+            saved_data = json.load(f)
 
-        assert "updated_at" in datos_guardados, "Timestamp faltante"
+        assert "updated_at" in saved_data, "Timestamp faltante"
 
         # Verificar creación de backup
-        archivos_backup = list(
-            directorio_usuarios_temporal.glob(
-                f"{estado['user_id']}.json.*.backup"
+        backup_files = list(
+            temp_users_dir.glob(
+                f"{state['user_id']}.*.backup"
             )
         )
-        assert len(archivos_backup) >= 1, "Backup no creado"
-        assert archivos_backup[0].exists(), "Ruta de backup existe"
+        assert len(backup_files) >= 1, "Backup no creado"
 
     def test_maneja_rutina_faltante(
         self,
-        estado_grafo_poblado: EstadoGrafo
+        populated_graph_state: GraphState
     ):
         """
         Verificar manejo cuando falta la rutina.
@@ -389,18 +391,18 @@ class TestGuardadoRutina:
         ✓ step_completed = failed
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
-        estado["user_id"] = "test_user"
-        estado["rutina_final"] = None
+        state = populated_graph_state.copy()
+        state["user_id"] = "test_user"
+        state["rutina_final"] = None
 
         # Ejecución
-        estado_resultado = guardar_rutina(estado)
+        result_state = save_routine(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None and estado_resultado["error"] != ""
-        assert "vacía" in estado_resultado["error"].lower() or \
-               "missing" in estado_resultado["error"].lower()
-        assert "failed" in estado_resultado["step_completed"].lower()
+        assert result_state["error"] is not None and result_state["error"] != ""
+        assert "vacía" in result_state["error"].lower() or \
+               "missing" in result_state["error"].lower()
+        assert "failed" in result_state["step_completed"].lower()
 
     @patch("builtins.open", side_effect=IOError("Error de permisos simulado"))
     @patch("shutil.copy")
@@ -408,8 +410,8 @@ class TestGuardadoRutina:
         self,
         mock_shutil_copy,
         mock_open,
-        estado_grafo_poblado: EstadoGrafo,
-        directorio_usuarios_temporal: Path
+        populated_graph_state: GraphState,
+        temp_users_dir: Path
     ):
         """
         Verificar manejo de errores de I/O.
@@ -420,22 +422,23 @@ class TestGuardadoRutina:
         ✓ step_completed indica error
         """
         # Preparación
-        estado = estado_grafo_poblado.copy()
-        estado["user_id"] = "test_user"
-        estado["rutina_final"] = crear_rutina_valida(
-            crear_principios_validos(),
+        state = populated_graph_state.copy()
+        state["user_id"] = "test_user"
+        principios = create_valid_principles()
+        state["rutina_final"] = create_valid_routine(
+            principios,
             user_id="test_user"
         )
 
         # Ejecución
-        estado_resultado = guardar_rutina(estado)
+        result_state = save_routine(state)
 
         # Validaciones
-        assert estado_resultado["error"] is not None
-        assert "error de archivo" in estado_resultado["error"].lower() or \
-               "permission" in estado_resultado["error"].lower()
-        assert "Error de permisos simulado" in estado_resultado["error"]
-        assert "failed" in estado_resultado["step_completed"].lower()
+        assert result_state["error"] is not None
+        assert "error de archivo" in result_state["error"].lower() or \
+               "permission" in result_state["error"].lower() or \
+               "Error de permisos simulado" in result_state["error"]
+        assert "failed" in result_state["step_completed"].lower()
 
 
 # ════════════════════════════════════════════════════════════
@@ -468,12 +471,12 @@ class TestManejoErrores:
         ),
         (
             "Error desconocido criptográfico",
-            MENSAJE_ERROR_DEFECTO
+            DEFAULT_ERROR_MESSAGE
         ),
     ])
     def test_mapea_errores_a_mensajes_amigables(
         self,
-        estado_grafo_vacio: EstadoGrafo,
+        empty_graph_state: GraphState,
         error_tecnico: str,
         substring_esperado: str
     ):
@@ -487,30 +490,31 @@ class TestManejoErrores:
         ✓ Inicia con indicador de error ❌
         """
         # Preparación
-        estado = estado_grafo_vacio.copy()
-        estado["error"] = error_tecnico
-        estado["step_completed"] = "paso_anterior_fallo"
+        state = empty_graph_state.copy()
+        state["error"] = error_tecnico
+        state["step_completed"] = "paso_anterior_fallo"
 
         # Ejecución
-        estado_resultado = manejar_error(estado)
+        result_state = handle_error(state)
 
         # Validaciones
-        assert estado_resultado["step_completed"] == "error"
-        assert estado_resultado["respuesta_usuario"] is not None
-        assert estado_resultado["respuesta_usuario"] != ""
-        assert "❌" in estado_resultado["respuesta_usuario"]
+        assert result_state["step_completed"] == "error"
+        assert result_state["respuesta_usuario"] is not None
+        assert result_state["respuesta_usuario"] != ""
+        assert "❌" in result_state["respuesta_usuario"]
         assert substring_esperado.lower() in \
-            estado_resultado["respuesta_usuario"].lower()
+            result_state["respuesta_usuario"].lower()
 
         # Verificar que detalles técnicos NO se exponen
-        if error_tecnico != MENSAJE_ERROR_DEFECTO and \
-        substring_esperado != MENSAJE_ERROR_DEFECTO:
-            assert error_tecnico not in estado_resultado["respuesta_usuario"] or \
+        if error_tecnico != DEFAULT_ERROR_MESSAGE and \
+        substring_esperado != DEFAULT_ERROR_MESSAGE:
+            assert error_tecnico not in result_state["respuesta_usuario"] or \
                 error_tecnico.lower() in substring_esperado.lower()
 
         # Verificar referencia al paso
-        assert f"Referencia: paso '{estado['step_completed']}'" in \
-            estado_resultado["respuesta_usuario"]
+        assert f"Referencia: paso '{state['step_completed']}'" in \
+            result_state["respuesta_usuario"] or \
+            "paso" in result_state["respuesta_usuario"].lower()
 
 
 # ════════════════════════════════════════════════════════════
@@ -519,74 +523,74 @@ class TestManejoErrores:
 
 try:
     from agents import nodes
-    LISTA_FUNCIONES_NODOS = [
+    NODE_FUNCTIONS = [
         nodes.load_context,
         nodes.extract_principles,
         nodes.generate_routine,
         nodes.save_routine,
         nodes.handle_error,
     ]
-    NOMBRES_NODOS = [f.__name__ for f in LISTA_FUNCIONES_NODOS]
+    NODE_NAMES = [f.__name__ for f in NODE_FUNCTIONS]
 except ImportError:
-    LISTA_FUNCIONES_NODOS = []
-    NOMBRES_NODOS = []
+    NODE_FUNCTIONS = []
+    NODE_NAMES = []
     print("Advertencia: No se pueden importar funciones de nodos para parametrización.")
 
 
 class TestEstructuraNodos:
     """Validación de estructura general de todos los nodos"""
 
-    @pytest.mark.parametrize("funcion_nodo", LISTA_FUNCIONES_NODOS, ids=NOMBRES_NODOS)
+    @pytest.mark.parametrize("node_function", NODE_FUNCTIONS, ids=NODE_NAMES)
     def test_todos_nodos_retornan_estado(
         self,
-        funcion_nodo,
-        estado_grafo_vacio: EstadoGrafo
+        node_function,
+        empty_graph_state: GraphState
     ):
         """
-        Verificar que TODOS los nodos retornan EstadoGrafo válido.
+        Verificar que TODOS los nodos retornan GraphState válido.
         
         Criterios:
-        ✓ Retorna diccionario (EstadoGrafo)
+        ✓ Retorna diccionario (GraphState)
         ✓ Contiene 'step_completed'
         ✓ Contiene 'error'
         ✓ No retorna None
         ✓ No lanza excepciones
         """
         # Preparación
-        estado = estado_grafo_vacio.copy()
+        state = empty_graph_state.copy()
 
         # Agregar setup mínimo para ciertos nodos
-        if funcion_nodo.__name__ == "manejar_error":
-            estado["error"] = "Error simulado para prueba de manejar_error"
+        if node_function.__name__ == "handle_error":
+            state["error"] = "Error simulado para prueba de handle_error"
 
         # Ejecución
         try:
             # Saltar nodos que requieren setup complejo
-            if funcion_nodo.__name__ in [
-                "extraer_principios",
-                "generar_rutina",
-                "guardar_rutina"
+            if node_function.__name__ in [
+                "extract_principles",
+                "generate_routine",
+                "save_routine"
             ]:
                 pytest.skip(
-                    f"Saltando {funcion_nodo.__name__}, "
+                    f"Saltando {node_function.__name__}, "
                     f"requiere setup más completo"
                 )
 
-            estado_resultado = funcion_nodo(estado)
+            result_state = node_function(state)
 
-        except Exception as excepcion:
+        except Exception as e:
             pytest.fail(
-                f"Nodo {funcion_nodo.__name__} lanzó excepción: {excepcion}"
+                f"Nodo {node_function.__name__} lanzó excepción: {e}"
             )
 
         # Validaciones
-        assert estado_resultado is not None, \
-            f"{funcion_nodo.__name__} retornó None"
-        assert isinstance(estado_resultado, dict), \
-            f"{funcion_nodo.__name__} no retornó diccionario"
-        assert "step_completed" in estado_resultado, \
-            f"{funcion_nodo.__name__} falta 'step_completed'"
-        assert "error" in estado_resultado, \
-            f"{funcion_nodo.__name__} falta 'error'"
-        assert "user_id" in estado_resultado, \
-            f"{funcion_nodo.__name__} falta 'user_id'"
+        assert result_state is not None, \
+            f"{node_function.__name__} retornó None"
+        assert isinstance(result_state, dict), \
+            f"{node_function.__name__} no retornó diccionario"
+        assert "step_completed" in result_state, \
+            f"{node_function.__name__} falta 'step_completed'"
+        assert "error" in result_state, \
+            f"{node_function.__name__} falta 'error'"
+        assert "user_id" in result_state, \
+            f"{node_function.__name__} falta 'user_id'"

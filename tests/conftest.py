@@ -1,7 +1,6 @@
 # Standard Library Imports
 import json
 import os
-import shutil
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, Generator
@@ -49,7 +48,6 @@ def create_valid_principles(
         citas = ["Página 138, Tabla 20"]
     if ecis is None:
         ecis = []
-    # Note: 'confianza' was in spec but not in model, removed. Add if needed.
     return PrincipiosExtraidos(
         intensidad_RIR=rir,
         rango_repeticiones=reps,
@@ -85,8 +83,8 @@ def create_valid_routine(principles: PrincipiosExtraidos | Dict[str, Any], user_
                 tipo="ECI",
                 sets=eci_data.get("sets", 3),
                 reps=eci_data.get("reps", "15"),
-                RIR="3", # ECIs can have different RIR
-                tempo="2:1:2:1", # ECIs can have different tempo
+                RIR="3",
+                tempo="2:1:2:1",
                 descanso_s=60,
                 notas=f"Compensatorio: {eci_data.get('motivo', 'N/A')}"
             )
@@ -106,19 +104,19 @@ def create_valid_routine(principles: PrincipiosExtraidos | Dict[str, Any], user_
                         nombre="Sentadilla",
                         tipo="principal",
                         sets=4,
-                        reps=reps, # Match principles
-                        RIR=rir, # Match principles
-                        tempo=tempo, # Match principles
-                        descanso_s=descanso, # Match principles
+                        reps=reps,
+                        RIR=rir,
+                        tempo=tempo,
+                        descanso_s=descanso,
                         notas="Técnica estricta",
                     ),
-                    *eci_ejercicios, # Include generated ECIs
+                    *eci_ejercicios,
                     Ejercicio(
                         nombre="Curl femoral",
                         tipo="accesorio",
                         sets=3,
                         reps="12-15",
-                        RIR="2-3", # Different RIR is ok for accessory
+                        RIR="2-3",
                         tempo="2:0:2:0",
                         descanso_s=60,
                         notas=None,
@@ -126,7 +124,7 @@ def create_valid_routine(principles: PrincipiosExtraidos | Dict[str, Any], user_
                 ],
             )
         ],
-        principios_aplicados=principles_dict if isinstance(principles, dict) else principles # Store the used principles
+        principios_aplicados=principles_dict if isinstance(principles, dict) else principles
     )
 
 # --- Fixtures ---
@@ -134,20 +132,18 @@ def create_valid_routine(principles: PrincipiosExtraidos | Dict[str, Any], user_
 @pytest.fixture
 def empty_graph_state() -> GraphState:
     """Provides an empty/initial GraphState dictionary."""
-    # Ensure all keys from TypedDict are present, even if None/empty
     return GraphState(
-        user_id="test_user", # Default test user
+        user_id="test_user",
         request_type="crear_rutina",
         perfil_usuario=None,
-        preferencias_logistica=None, # Added based on spec
+        preferencias_logistica=None,
         principios_libro=None,
         rutina_final=None,
         step_completed="",
         error=None,
         timestamp=datetime.now().isoformat(),
         debug_info=None,
-        # Add any other keys defined in GraphState
-        respuesta_usuario="" # Added based on spec
+        respuesta_usuario=""
     )
 
 @pytest.fixture
@@ -156,18 +152,18 @@ def user_profile_sample() -> Dict[str, Any]:
     return {
         "user_id": "test_user",
         "name": "Test User",
-        "level": "intermedio", # Correct key based on JSON
+        "level": "intermedio",
         "workout_count": 15,
         "objetivo": "hipertrofia",
         "frecuencia_semanal": 4,
         "ejercicios_favoritos": ["Sentadilla", "Press banca"],
-        "restricciones": ["rodilla izquierda"], # Example restriction
+        "restricciones": ["rodilla izquierda"],
         "preferencias_logistica": {
-            "equipamiento_disponible": "gimnasio completo", # Correct key based on JSON
-            "dias_preferidos": ["lunes", "miércoles", "viernes"], # Correct key based on JSON
-            "duracion_sesion_min": 60 # Correct key based on JSON
+            "equipamiento_disponible": "gimnasio completo",
+            "dias_preferidos": ["lunes", "miércoles", "viernes"],
+            "duracion_sesion_min": 60
         },
-        "rutina_activa": None, # Added based on JSON update
+        "rutina_activa": None,
         "created_at": "2024-01-01",
         "last_login": "2025-10-25"
     }
@@ -178,7 +174,7 @@ def populated_graph_state(empty_graph_state: GraphState, user_profile_sample: Di
     """Provides a GraphState with the perfil_usuario field populated."""
     state = empty_graph_state.copy()
     state["perfil_usuario"] = user_profile_sample
-    state["step_completed"] = "context_loaded" # Simulate context loaded
+    state["step_completed"] = "context_loaded"
     return state
 
 
@@ -198,24 +194,18 @@ def temp_users_dir(tmp_path: Path, user_profile_sample: Dict[str, Any], monkeypa
 
     # Create a corrupted JSON file
     corrupt_json_path = users_dir / "corrupt_user.json"
-    corrupt_json_path.write_text('{"user_id": "corrupt_user", "name": "Bad JSON",', encoding='utf-8') # Missing closing brace
+    corrupt_json_path.write_text('{"user_id": "corrupt_user", "name": "Bad JSON",', encoding='utf-8')
 
     # Create an incomplete profile file
     incomplete_json_path = users_dir / "incomplete_user.json"
     incomplete_json_path.write_text(json.dumps({
         "user_id": "incomplete_user",
         "name": "Incomplete",
-        # Missing "level" and "objetivo"
         "restricciones": []
         }, indent=2, ensure_ascii=False), encoding='utf-8')
 
-
     # Mock Config.USERS_DIR to use this temporary directory
-    # We mock it on the Config class itself before any instance is created in tests
     monkeypatch.setattr(Config, 'USERS_DIR', users_dir)
-
-    # Ensure the original USERS_DIR is restored after the test if needed elsewhere,
-    # although monkeypatch usually handles this cleanup automatically.
 
     return users_dir
 
@@ -251,10 +241,8 @@ def sample_long_paragraphs() -> str:
 @pytest.fixture
 def chunk_splitter():
     """Provides an instance of the configured text splitter."""
-    # Renamed from chunking_strategy based on user's file name
     return get_semantic_text_splitter()
 
-# Scope="session" is crucial: build/load the vector store only ONCE per test session
 @pytest.fixture(scope="session")
 def vectorstore(tmp_path_factory) -> Generator[Any, None, None]:
     """
@@ -262,35 +250,28 @@ def vectorstore(tmp_path_factory) -> Generator[Any, None, None]:
     Uses a session-scoped temporary directory if CHROMA_DIR doesn't exist.
     """
     config = Config()
-    # Use a session-specific temp dir only if the main one doesn't exist
-    # to avoid rebuilding repeatedly during local dev testing if DB exists
     chroma_persist_dir = config.CHROMA_DIR
     if not os.path.exists(chroma_persist_dir):
-        # Create a temp dir that persists for the whole session
         temp_dir = tmp_path_factory.mktemp("chroma_db_session")
         chroma_persist_dir = temp_dir
         print(f"\n[Fixture] Vectorstore doesn't exist, building in session temp dir: {temp_dir}")
-        # Monkeypatch CHROMA_DIR for the manager during build ONLY if using temp dir
-        # Be careful if other tests rely on the original Config path
         original_chroma_dir = Config.CHROMA_DIR
-        Config.CHROMA_DIR = temp_dir # Temporarily override
-        manager = VectorStoreManager() # Uses the overridden path
+        Config.CHROMA_DIR = temp_dir
+        manager = VectorStoreManager()
         try:
-            vs = manager.get_or_create_vectorstore() # Builds in temp dir
+            vs = manager.get_or_create_vectorstore()
         finally:
-            Config.CHROMA_DIR = original_chroma_dir # Restore original path
-        yield vs # Yield the store built in temp dir
+            Config.CHROMA_DIR = original_chroma_dir
+        yield vs
     else:
         print(f"\n[Fixture] Loading existing vectorstore from: {chroma_persist_dir}")
-        manager = VectorStoreManager() # Uses the existing path
-        vs = manager.get_or_create_vectorstore() # Loads from existing path
-        yield vs # Yield the loaded store
+        manager = VectorStoreManager()
+        vs = manager.get_or_create_vectorstore()
+        yield vs
 
 @pytest.fixture
 def principle_extractor() -> PrincipleExtractor:
     """Provides an instance of PrincipleExtractor."""
-    # Ensure environment variables (like OPENAI_API_KEY) are set for real tests
-    # or mock the LLM/embeddings if needed for isolated testing
     return PrincipleExtractor()
 
 @pytest.fixture
@@ -299,44 +280,30 @@ def mock_openai_chat_completions(monkeypatch: pytest.MonkeyPatch):
     Mocks the ChatOpenAI().invoke call to return predefined responses
     for testing generate_routine node without hitting the actual API.
     """
-    mock_responses = {} # Store mock responses keyed by input characteristics if needed
+    mock_responses = {}
 
     def add_mock_response(identifier: str, response: Any):
         """Helper to set up specific mock responses."""
         mock_responses[identifier] = response
 
     def mock_invoke(*args, **kwargs):
-        # args[0] is typically the input dictionary/prompt value
         prompt_input = args[0] if args else kwargs
 
-        # Simple example: return a valid routine structure if prompt contains "generate"
-        # More complex logic can inspect prompt_input keys/values
         if isinstance(prompt_input, dict) and "principios" in prompt_input:
             print("[Mock OpenAI] Returning predefined valid routine.")
-            # Use the factory to create a consistent valid routine
-            # We need principles here, try to get from input or use default
             principles_dict = prompt_input.get("principios", {})
             principles_obj = PrincipiosExtraidos(**principles_dict) if principles_dict else create_valid_principles()
-            # Return the Pydantic object itself, as the parser is part of the chain
             return create_valid_routine(principles_obj)
 
-        # Example: Simulate parsing error
         elif isinstance(prompt_input, str) and "parse_error" in prompt_input:
             print("[Mock OpenAI] Returning malformed JSON string to cause parse error.")
-            # The parser will try to parse this, causing OutputParserException
-            return MagicMock(content='{"rutina": "bad json", ...') # Mock AIMessage with bad content
+            return MagicMock(content='{"rutina": "bad json", ...')
 
-        # Default fallback or raise error
         print(f"[Mock OpenAI] No specific mock found for input: {prompt_input}. Returning default or error.")
-        # Default valid routine if no other match
         return create_valid_routine(create_valid_principles())
-        # raise NotImplementedError("Mock invoke called with unexpected input")
 
-    # Mock the 'invoke' method of the ChatOpenAI class instance used in the node
-    # Adjust the target path if necessary based on where ChatOpenAI is instantiated
     monkeypatch.setattr("langchain_openai.ChatOpenAI.invoke", mock_invoke)
 
-    # Return the helper function to allow tests to set specific responses
     return add_mock_response
 
 @pytest.fixture
@@ -344,23 +311,25 @@ def mock_principle_extractor_chain(monkeypatch: pytest.MonkeyPatch):
     """
     Mocks the entire PrincipleExtractor chain's invoke method
     to bypass RAG and LLM calls for node testing.
+    
+    ✅ CORRECCIÓN: Eliminar 'self' del mock_invoke para que funcione como función simple
     """
-    mock_responses = {"default": create_valid_principles()} # Default valid response
+    mock_responses = {"default": create_valid_principles()}
 
     def add_mock_response(profile_identifier: str, response: PrincipiosExtraidos | Exception):
         """Set a specific response for a profile characteristic."""
         mock_responses[profile_identifier] = response
 
-    def mock_invoke(self, perfil_usuario: Dict[str, Any]):
+    # ✅ CORRECCIÓN: Quitar 'self' - esta es una función, no un método
+    def mock_invoke(perfil_usuario: Dict[str, Any]):
         """Mocked invoke method for the extraction chain."""
-        # Example: Return specific response based on user level
         level = perfil_usuario.get("level", "unknown")
         user_id = perfil_usuario.get("user_id", "unknown")
         print(f"[Mock RAG Chain] Invoked for user '{user_id}', level '{level}'.")
 
         if level in mock_responses:
             response = mock_responses[level]
-        elif "no_citations" in mock_responses and level == "no_citations_test": # Specific trigger
+        elif "no_citations" in mock_responses and level == "no_citations_test":
             response = mock_responses["no_citations"]
         elif "error" in mock_responses and level == "error_test":
             response = mock_responses["error"]
@@ -374,16 +343,12 @@ def mock_principle_extractor_chain(monkeypatch: pytest.MonkeyPatch):
             print(f"[Mock RAG Chain] Returning predefined principles: RIR={response.intensidad_RIR}, Citations={len(response.citas_fuente)}")
             return response
 
-    # The target is the invoke method of the RunnableSequence *returned by* get_extraction_chain
-    # This is tricky. It might be easier to mock PrincipleExtractor.get_extraction_chain
-    # to return a MagicMock object whose 'invoke' method is the one defined above.
-
     mock_chain = MagicMock()
-    mock_chain.invoke = mock_invoke
+    mock_chain.invoke = mock_invoke  # ✅ Ahora funciona correctamente
 
     monkeypatch.setattr(
         "rag.principle_extractor.PrincipleExtractor.get_extraction_chain",
-        lambda self: mock_chain # Return the mock chain instead of the real one
+        lambda self: mock_chain
     )
 
-    return add_mock_response # Return helper to configure mocks in tests
+    return add_mock_response

@@ -1,235 +1,1519 @@
-2025-10-26 17:28:25 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:28:26 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:28:30 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:28:30 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:28:30 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:28:30 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:28:30 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:28:30 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:28:30 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:28:30 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:28:30 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:28:31 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:28:31 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:28:31 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:28:31 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:28:31 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:28:31 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:28:31 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:28:31 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:28:31 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:28:32 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:28:32 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:28:32 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:28:32 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:28:32 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:28:32 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:28:32 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:28:32 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:28:32 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:28:33 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:28:33 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:28:33 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:28:33 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:28:33 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:28:33 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:28:33 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:28:33 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:28:33 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:28:34 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:28:34 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:28:34 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:28:34 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:28:34 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:28:34 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:28:34 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:28:34 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:28:34 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:36:12 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:36:12 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:36:16 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:36:16 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:36:16 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:36:16 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:36:16 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:36:16 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:36:16 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:36:16 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:36:16 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:36:17 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:36:17 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:36:17 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:36:17 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:36:17 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:36:17 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:36:17 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:36:17 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:36:17 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:36:18 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:36:18 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:36:18 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:36:18 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:36:18 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:36:18 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:36:18 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:36:18 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:36:18 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:36:19 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:36:19 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:36:19 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:36:19 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:36:19 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:36:19 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:36:19 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:36:19 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:36:19 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:36:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:36:20 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:36:20 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:36:20 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:36:20 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:36:20 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:36:20 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:36:20 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:36:20 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:37:02 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:37:03 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:37:06 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:37:06 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:37:06 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:37:06 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:37:06 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:37:06 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:37:06 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:37:06 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:37:06 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:37:07 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:37:07 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:37:07 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:37:07 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:37:07 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:37:07 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:37:07 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:37:07 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:37:07 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:37:08 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:37:08 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:37:08 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:37:08 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:37:08 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:37:08 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:37:08 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:37:08 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:37:08 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:37:09 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:37:09 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:37:09 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:37:09 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:37:09 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:37:09 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:37:09 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:37:09 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:37:09 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:37:10 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:37:10 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:37:10 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:37:10 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:37:10 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:37:10 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:37:10 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:37:10 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:37:10 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:13 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:14 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:17 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:17 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:17 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:17 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:17 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:17 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:17 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:17 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:17 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:18 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:18 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:18 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:18 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:18 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:18 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:18 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:18 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:18 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:19 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:19 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:19 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:19 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:19 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:19 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:19 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:19 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:19 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:20 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:31 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:32 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:34 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:34 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:34 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:34 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:34 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:34 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:34 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:34 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:34 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:35 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:35 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:35 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:35 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:35 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:35 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:35 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:35 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:35 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:36 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:36 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:36 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:36 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:36 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:36 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:36 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:36 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:36 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:37 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:37 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:37 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:37 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:37 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:37 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:37 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:37 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:37 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
-2025-10-26 17:42:38 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
-2025-10-26 17:42:38 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
-2025-10-26 17:42:38 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
-2025-10-26 17:42:38 - rag.principle_extractor - INFO - Prompt template loaded successfully.
-2025-10-26 17:42:38 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
-2025-10-26 17:42:38 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
-2025-10-26 17:42:38 - rag.principle_extractor - INFO - Retriever obtained from vector store.
-2025-10-26 17:42:38 - rag.principle_extractor - INFO - PromptTemplate instance created.
-2025-10-26 17:42:38 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 17:49:17 - agents.nodes.load_context - ERROR - User file not found for user_id: test_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\usuario_inexistente.json
+2025-10-26 17:49:17 - agents.nodes.load_context - ERROR - User file not found for user_id: usuario_inexistente at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\usuario_inexistente.json
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\corrupt_user.json
+2025-10-26 17:49:17 - agents.nodes.load_context - ERROR - User file not found for user_id: corrupt_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\corrupt_user.json
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 17:49:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\incomplete_user.json
+2025-10-26 17:49:17 - agents.nodes.load_context - ERROR - User file not found for user_id: incomplete_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\incomplete_user.json
+2025-10-26 17:49:17 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 17:49:17 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 17:49:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:20 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 17:49:20 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 17:49:20 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 17:49:20 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 17:49:20 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 17:49:21 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:21 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 17:49:21 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 17:49:21 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 17:49:21 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 17:49:21 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 17:49:21 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:21 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 17:49:21 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 17:49:21 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 17:49:21 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 17:49:21 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 17:49:21 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 17:49:21 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 17:49:21 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 17:49:22 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 17:49:22 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 17:49:23 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 17:49:23 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 17:49:24 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 17:49:24 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 17:49:24 - agents.nodes.generate_routine - ERROR - 'principios_libro' missing in state.
+2025-10-26 17:49:24 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 17:49:24 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 17:49:24 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 17:49:24 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 17:49:24 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 17:49:25 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 17:49:25 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 17:49:26 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 17:49:26 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 17:49:27 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 17:49:27 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 17:49:27 - agents.nodes.save_routine - INFO - Attempting to save routine for user test_user to C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 17:49:27 - agents.nodes.save_routine - ERROR - User file C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json not found. Cannot save routine.
+2025-10-26 17:49:27 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 17:49:27 - agents.nodes.save_routine - ERROR - 'rutina_final' missing or None in state.
+2025-10-26 17:49:27 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Usuario 'xyz' no encontrado
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Archivo corrupto para usuario 'abc': Unterminated string
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al leer los datos de tu perfil. Podría estar corrupto.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Alucinación detectada: principios extraídos sin citas
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: No pude verificar la información extraída del libro (faltan citas). No puedo proceder de forma segura.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Validación fallida: RIR inconsistente
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: La rutina generada no parece cumplir con los principios o tus preferencias.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error de archivo guardando rutina: [Errno 13] Permission denied
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al intentar guardar la rutina en tu perfil.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error desconocido criptográfico
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 17:49:28 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 17:49:28 - agents.nodes.load_context - ERROR - User file not found for user_id: test_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 17:49:28 - agents.nodes.handle_error - ERROR - Error captured in step '': Error simulado para prueba de handle_error
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso '')
+2025-10-26 17:49:28 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 17:49:28 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:49:29 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:49:32 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:32 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:49:32 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:49:32 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:49:32 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:49:32 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:49:32 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:49:32 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:49:32 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:49:33 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:33 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:49:33 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:49:33 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:49:33 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:49:33 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:49:33 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:49:33 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:49:33 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:49:34 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:34 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:49:34 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:49:34 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:49:34 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:49:34 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:49:34 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:49:34 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:49:34 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:49:35 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:35 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:49:35 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:49:35 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:49:35 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:49:35 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:49:35 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:49:35 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:49:35 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:49:36 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:49:36 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:49:36 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:49:36 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:49:36 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:49:36 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:49:36 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:49:36 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:49:36 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+
+
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:04:54 - agents.nodes.load_context - ERROR - User file not found for user_id: test_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\usuario_inexistente.json
+2025-10-26 18:04:54 - agents.nodes.load_context - ERROR - User file not found for user_id: usuario_inexistente at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\usuario_inexistente.json
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\corrupt_user.json
+2025-10-26 18:04:54 - agents.nodes.load_context - ERROR - User file not found for user_id: corrupt_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\corrupt_user.json
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:04:54 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\incomplete_user.json
+2025-10-26 18:04:54 - agents.nodes.load_context - ERROR - User file not found for user_id: incomplete_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\incomplete_user.json
+2025-10-26 18:04:54 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:04:54 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:04:56 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:04:56 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:04:56 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 18:04:56 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:04:56 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:04:56 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:04:57 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:04:57 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:04:57 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 18:04:57 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:04:57 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:04:57 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:04:58 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:04:58 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:04:58 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 18:04:58 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:04:58 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:04:58 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 18:04:58 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 18:04:58 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 18:04:58 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:04:59 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 18:04:59 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:05:00 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 18:05:00 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:05:01 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 18:05:01 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:05:01 - agents.nodes.generate_routine - ERROR - 'principios_libro' missing in state.
+2025-10-26 18:05:01 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:05:01 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 18:05:01 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 18:05:01 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 18:05:01 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:05:02 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 18:05:02 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:05:03 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 18:05:03 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:05:04 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 18:05:04 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:05:04 - agents.nodes.save_routine - INFO - Attempting to save routine for user test_user to C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:05:04 - agents.nodes.save_routine - ERROR - User file C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json not found. Cannot save routine.
+2025-10-26 18:05:04 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:05:04 - agents.nodes.save_routine - ERROR - 'rutina_final' missing or None in state.
+2025-10-26 18:05:04 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Usuario 'xyz' no encontrado
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Archivo corrupto para usuario 'abc': Unterminated string
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al leer los datos de tu perfil. Podría estar corrupto.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Alucinación detectada: principios extraídos sin citas
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: No pude verificar la información extraída del libro (faltan citas). No puedo proceder de forma segura.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Validación fallida: RIR inconsistente
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: La rutina generada no parece cumplir con los principios o tus preferencias.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error de archivo guardando rutina: [Errno 13] Permission denied
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al intentar guardar la rutina en tu perfil.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error desconocido criptográfico
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:05:04 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:05:04 - agents.nodes.load_context - ERROR - User file not found for user_id: test_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:05:04 - agents.nodes.handle_error - ERROR - Error captured in step '': Error simulado para prueba de handle_error
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso '')
+2025-10-26 18:05:04 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:05:05 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:05:06 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:05:07 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:05:07 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:05:07 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:05:07 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:05:07 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:05:07 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:05:07 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:05:07 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:05:07 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:05:08 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:05:08 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:05:08 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:05:08 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:05:08 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:05:08 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:05:08 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:05:08 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:05:08 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:05:09 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:05:09 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:05:09 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:05:09 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:05:09 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:05:09 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:05:09 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:05:09 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:05:09 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:05:10 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:05:10 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:05:10 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:05:10 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:05:10 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:05:10 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:05:10 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:05:10 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:05:10 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:05:11 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:05:11 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:05:11 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:05:11 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:05:11 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:05:11 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:05:11 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:05:11 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:05:11 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_carga_perfil_usuario_exit0\users\test_user.json
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - Successfully loaded profile for user: test_user
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - --- Exiting Load Context Node ---
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_maneja_usuario_no_encontr0\users\usuario_inexistente.json
+2025-10-26 18:22:17 - agents.nodes.load_context - ERROR - User file not found for user_id: usuario_inexistente at C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_maneja_usuario_no_encontr0\users\usuario_inexistente.json
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_maneja_json_corrupto0\users\corrupt_user.json
+2025-10-26 18:22:17 - agents.nodes.load_context - ERROR - Failed to decode JSON for user corrupt_user: Expecting property name enclosed in double quotes: line 1 column 48 (char 47)
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\load_context.py", line 45, in load_context
+    user_profile = json.load(f)
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 48 (char 47)
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - --- Exiting Load Context Node ---
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:22:17 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_maneja_perfil_incompleto0\users\incomplete_user.json
+2025-10-26 18:22:17 - agents.nodes.load_context - ERROR - User profile for incomplete_user is incomplete. Missing fields: ['level', 'objetivo']
+2025-10-26 18:22:17 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:22:17 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:22:19 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:19 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:22:19 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 18:22:19 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:22:19 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:22:19 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:22:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:20 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:22:20 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 18:22:20 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:22:20 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:22:20 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:22:21 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:21 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:22:21 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 48, in extract_principles
+    principios: PrincipiosExtraidos = extraction_chain.invoke(perfil_usuario)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: mock_principle_extractor_chain.<locals>.mock_invoke() missing 1 required positional argument: 'perfil_usuario'
+2025-10-26 18:22:21 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:22:21 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:22:21 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 18:22:21 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 18:22:21 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 18:22:21 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:22:22 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 18:22:22 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:22:23 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 18:22:23 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:22:24 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 18:22:24 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:22:24 - agents.nodes.generate_routine - ERROR - 'principios_libro' missing in state.
+2025-10-26 18:22:24 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:22:24 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 18:22:24 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 18:22:24 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 18:22:24 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:22:25 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 18:22:25 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:22:26 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 18:22:26 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'format_instructions\', \'\\n"dia_semana"\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {format_instructions} to be part of the string and not a variable, please escape it with double curly braces like: \'{{format_instructions}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:22:27 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - Attempting to save routine for user test_user to C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_guarda_rutina_exitosament0\users\test_user.json
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - Created backup at: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_guarda_rutina_exitosament0\users\test_user.20251026182227.backup
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - Successfully wrote updated data to C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_guarda_rutina_exitosament0\users\test_user.json
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - Post-write verification passed.
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - --- Exiting Save Routine Node ---
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:22:27 - agents.nodes.save_routine - ERROR - 'rutina_final' missing or None in state.
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - Attempting to save routine for user test_user to C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-2\test_maneja_error_io0\users\test_user.json
+2025-10-26 18:22:27 - agents.nodes.save_routine - ERROR - File system error saving routine for test_user: Error de permisos simulado
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\save_routine.py", line 62, in save_routine
+    with open(user_file_path, "r", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+OSError: Error de permisos simulado
+2025-10-26 18:22:27 - agents.nodes.save_routine - INFO - --- Exiting Save Routine Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Usuario 'xyz' no encontrado
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Archivo corrupto para usuario 'abc': Unterminated string
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al leer los datos de tu perfil. Podría estar corrupto.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Alucinación detectada: principios extraídos sin citas
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: No pude verificar la información extraída del libro (faltan citas). No puedo proceder de forma segura.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Validación fallida: RIR inconsistente
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: La rutina generada no parece cumplir con los principios o tus preferencias.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error de archivo guardando rutina: [Errno 13] Permission denied
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al intentar guardar la rutina en tu perfil.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error desconocido criptográfico
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:22:27 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:22:27 - agents.nodes.load_context - ERROR - User file not found for user_id: test_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:22:27 - agents.nodes.handle_error - ERROR - Error captured in step '': Error simulado para prueba de handle_error
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso '')
+2025-10-26 18:22:27 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:22:28 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:22:28 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:22:31 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:31 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:22:31 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:22:31 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:22:31 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:22:31 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:22:31 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:22:31 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:22:31 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:22:32 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:32 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:22:32 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:22:32 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:22:32 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:22:32 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:22:32 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:22:32 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:22:32 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:22:33 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:33 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:22:33 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:22:33 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:22:33 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:22:33 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:22:33 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:22:33 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:22:33 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:22:34 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:34 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:22:34 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:22:34 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:22:34 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:22:34 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:22:34 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:22:34 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:22:34 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:22:36 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:22:36 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:22:36 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:22:36 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:22:36 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:22:36 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:22:36 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:22:36 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:22:36 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_carga_perfil_usuario_exit0\users\test_user.json
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - Successfully loaded profile for user: test_user
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - --- Exiting Load Context Node ---
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_maneja_usuario_no_encontr0\users\usuario_inexistente.json
+2025-10-26 18:26:11 - agents.nodes.load_context - ERROR - User file not found for user_id: usuario_inexistente at C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_maneja_usuario_no_encontr0\users\usuario_inexistente.json
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_maneja_json_corrupto0\users\corrupt_user.json
+2025-10-26 18:26:11 - agents.nodes.load_context - ERROR - Failed to decode JSON for user corrupt_user: Expecting property name enclosed in double quotes: line 1 column 48 (char 47)
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\load_context.py", line 45, in load_context
+    user_profile = json.load(f)
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 48 (char 47)
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - --- Exiting Load Context Node ---
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:26:11 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_maneja_perfil_incompleto0\users\incomplete_user.json
+2025-10-26 18:26:11 - agents.nodes.load_context - ERROR - User profile for incomplete_user is incomplete. Missing fields: ['level', 'objetivo']
+2025-10-26 18:26:11 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:26:11 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:26:13 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:13 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:26:13 - agents.nodes.extract_principles - INFO - Successfully extracted principles for user: test_user
+2025-10-26 18:26:13 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:26:13 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:26:13 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:26:14 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:14 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:26:14 - agents.nodes.extract_principles - ERROR - CRITICAL: Extracted principles lack source citations!
+2025-10-26 18:26:14 - agents.nodes.extract_principles - ERROR - Error invoking principle extraction chain: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\extract_principles.py", line 63, in extract_principles
+    state["debug_info"]["principles_without_citations"] = principios.model_dump() # Pydantic V2
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object does not support item assignment
+2025-10-26 18:26:14 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:26:14 - agents.nodes.extract_principles - INFO - --- Entering Extract Principles Node ---
+2025-10-26 18:26:14 - agents.nodes.extract_principles - INFO - Initializing PrincipleExtractor...
+2025-10-26 18:26:14 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:14 - agents.nodes.extract_principles - INFO - Extraction chain obtained. Invoking...
+2025-10-26 18:26:14 - agents.nodes.extract_principles - INFO - Successfully extracted principles for user: test_user
+2025-10-26 18:26:14 - agents.nodes.extract_principles - INFO - --- Exiting Extract Principles Node ---
+2025-10-26 18:26:14 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:26:14 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 18:26:14 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 18:26:14 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 18:26:14 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:26:15 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 18:26:15 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:26:16 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 18:26:16 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:26:17 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 18:26:18 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:26:18 - agents.nodes.generate_routine - ERROR - 'principios_libro' missing in state.
+2025-10-26 18:26:18 - agents.nodes.generate_routine - INFO - --- Entering Generate Routine Node ---
+2025-10-26 18:26:18 - agents.nodes.generate_routine - INFO - Loading routine assembler prompt from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\routine_assembler.txt
+2025-10-26 18:26:18 - agents.nodes.generate_routine - INFO - Routine generation chain built.
+2025-10-26 18:26:18 - agents.nodes.generate_routine - INFO - Attempt 1/3 to generate routine...
+2025-10-26 18:26:18 - agents.nodes.generate_routine - ERROR - Attempt 1 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:26:19 - agents.nodes.generate_routine - INFO - Attempt 2/3 to generate routine...
+2025-10-26 18:26:19 - agents.nodes.generate_routine - ERROR - Attempt 2 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:26:20 - agents.nodes.generate_routine - INFO - Attempt 3/3 to generate routine...
+2025-10-26 18:26:20 - agents.nodes.generate_routine - ERROR - Attempt 3 failed with unexpected error: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\generate_routine.py", line 145, in generate_routine
+    generated_routine = chain.invoke(prompt_variables)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3091, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 209, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._format_prompt_with_error_handling,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        serialized=self._serialized,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2021, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 182, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\.venv\Lib\site-packages\langchain_core\prompts\base.py", line 176, in _validate_input
+    raise KeyError(
+        create_message(message=msg, error_code=ErrorCode.INVALID_PROMPT_INPUT)
+    )
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'\\n"dia_semana"\', \'format_instructions\'}.  Expected: [\'\\n"dia_semana"\', \'format_instructions\', \'perfil\', \'preferencias\', \'principios\'] Received: [\'principios\', \'perfil\', \'preferencias\']\nNote: if you intended {\n"dia_semana"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n"dia_semana"}}\'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT '
+2025-10-26 18:26:21 - agents.nodes.generate_routine - ERROR - Failed to generate valid routine after 3 attempts.
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - Attempting to save routine for user test_user to C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_guarda_rutina_exitosament0\users\test_user.json
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - Created backup at: C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_guarda_rutina_exitosament0\users\test_user.20251026182621.backup
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - Successfully wrote updated data to C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_guarda_rutina_exitosament0\users\test_user.json
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - Post-write verification passed.
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - --- Exiting Save Routine Node ---
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:26:21 - agents.nodes.save_routine - ERROR - 'rutina_final' missing or None in state.
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - --- Entering Save Routine Node ---
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - Attempting to save routine for user test_user to C:\Users\Usuario\AppData\Local\Temp\pytest-of-Usuario\pytest-3\test_maneja_error_io0\users\test_user.json
+2025-10-26 18:26:21 - agents.nodes.save_routine - ERROR - File system error saving routine for test_user: Error de permisos simulado
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\agents\nodes\save_routine.py", line 62, in save_routine
+    with open(user_file_path, "r", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+OSError: Error de permisos simulado
+2025-10-26 18:26:21 - agents.nodes.save_routine - INFO - --- Exiting Save Routine Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Usuario 'xyz' no encontrado
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Archivo corrupto para usuario 'abc': Unterminated string
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al leer los datos de tu perfil. Podría estar corrupto.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Alucinación detectada: principios extraídos sin citas
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: No pude verificar la información extraída del libro (faltan citas). No puedo proceder de forma segura.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Validación fallida: RIR inconsistente
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: La rutina generada no parece cumplir con los principios o tus preferencias.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error de archivo guardando rutina: [Errno 13] Permission denied
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Hubo un problema al intentar guardar la rutina en tu perfil.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - ERROR - Error captured in step 'paso_anterior_fallo': Error desconocido criptográfico
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso 'paso_anterior_fallo')
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.load_context - INFO - --- Entering Load Context Node ---
+2025-10-26 18:26:21 - agents.nodes.load_context - INFO - Attempting to load user profile from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:26:21 - agents.nodes.load_context - ERROR - User file not found for user_id: test_user at C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\users\test_user.json
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Entering Handle Error Node ---
+2025-10-26 18:26:21 - agents.nodes.handle_error - ERROR - Error captured in step '': Error simulado para prueba de handle_error
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - Generated user-friendly error message: ❌ Lo siento, hubo un problema: Ocurrió un error inesperado procesando tu solicitud.
+(Referencia: paso '')
+2025-10-26 18:26:21 - agents.nodes.handle_error - INFO - --- Exiting Handle Error Node ---
+2025-10-26 18:26:21 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:26:22 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:26:25 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:25 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:26:25 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:26:25 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:26:25 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:26:25 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:26:25 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:26:25 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:26:25 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:26:26 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:26 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:26:26 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:26:26 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:26:26 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:26:26 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:26:26 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:26:26 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:26:26 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:26:27 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:27 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:26:27 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:26:27 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:26:27 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:26:27 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:26:27 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:26:27 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:26:27 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:26:28 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:28 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:26:28 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:26:28 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:26:28 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:26:28 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:26:28 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:26:28 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:26:28 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 18:26:29 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 18:26:29 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 18:26:29 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 18:26:29 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 18:26:29 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 18:26:29 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 18:26:29 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 18:26:29 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 18:26:29 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
