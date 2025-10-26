@@ -1,5 +1,12 @@
 """
-Cargador de prompts con datos del usuario desde JSON
+[LEGACY] Cargador de prompts del sistema antiguo.
+
+Este módulo se mantiene para backward compatibility con el agente EntrenadorAgent legacy.
+El nuevo sistema RAG (Fase 2+) carga prompts directamente desde archivos .txt:
+- prompts/rag_principle_extractor.txt
+- prompts/routine_assembler.txt
+
+NO modificar este archivo a menos que sea necesario para el agente legacy.
 """
 from pathlib import Path
 from datetime import datetime

@@ -12,5 +12,12 @@
   ],
   "restricciones": [],
   "created_at": "2025-10-22",
-  "last_login": "2025-10-22"
+  "last_login": "2025-10-22",
+  
+  "preferencias_logistica": {
+    "equipamiento_disponible": "gimnasio completo",
+    "dias_preferidos": ["lunes", "martes", "jueves", "viernes"],
+    "duracion_sesion_min": 60
+  },
+  "rutina_activa": null
 }

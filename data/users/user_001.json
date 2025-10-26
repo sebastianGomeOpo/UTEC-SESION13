@@ -14,5 +14,12 @@
     "rodilla izquierda"
   ],
   "created_at": "2024-08-15",
-  "last_login": "2025-10-22"
+  "last_login": "2025-10-22",
+
+  "preferencias_logistica": {
+    "equipamiento_disponible": "gimnasio completo",
+    "dias_preferidos": ["lunes", "martes", "miercoles", "viernes", "sabado"],
+    "duracion_sesion_min": 75
+  },
+  "rutina_activa": null
 }

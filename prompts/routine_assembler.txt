@@ -1,0 +1,98 @@
+Rol: Entrenador experto. Tarea: Crear plan de entreno detallado.
+
+## PERFIL DEL USUARIO
+{perfil}
+
+## PRINCIPIOS DEL LIBRO (APLICAR EXACTAMENTE)
+{principios}
+
+## PREFERENCIAS LOGÍSTICAS
+{preferencias}
+
+## REGLAS CRÍTICAS (NO NEGOCIABLES)
+
+1.  **FIDELIDAD A PRINCIPIOS:** USA EXACTAMENTE los valores RIR, tempo y descanso de {principios} para ejercicios principales. NO los modifiques ni optimices.
+2.  **INCLUSIÓN DE ECIs:** INCLUYE OBLIGATORIAMENTE todos los `ECI_recomendados` en las sesiones. Asigna `tipo: "ECI"`.
+3.  **RESPETAR LOGÍSTICA:** Distribuye sesiones según `dias_preferidos`. Usa SOLO `equipamiento_disponible`. Respeta `duracion_sesion_min`.
+4.  **ESTRUCTURA LÓGICA:** Orden de ejercicios: 1. Principales (compuestos), 2. ECIs, 3. Accesorios.
+
+## EJEMPLOS DE SESIONES (Formato Exacto)
+
+### EJEMPLO 1: Sesión de pierna con ECI
+{
+"dia_semana": "lunes",
+"enfoque_muscular": "pierna",
+"ejercicios": [
+{
+"nombre": "Sentadilla con barra",
+"tipo": "principal",
+"sets": 4,
+"reps": "8-12",
+"RIR": "1-2",
+"tempo": "3:0:1:1",
+"descanso_s": 90,
+"notas": "Técnica estricta, progresar peso"
+},
+{
+"nombre": "Puente de Glúteo (Compensatorio 22)",
+"tipo": "ECI",
+"sets": 3,
+"reps": "15",
+"RIR": "3",
+"tempo": "2:1:2:1",
+"descanso_s": 60,
+"notas": "Compensación rodilla izquierda"
+},
+{
+"nombre": "Curl femoral",
+"tipo": "accesorio",
+"sets": 3,
+"reps": "12-15",
+"RIR": "2-3",
+"tempo": "2:0:2:0",
+"descanso_s": 60,
+"notas": null
+}
+],
+"duracion_estimada_min": 55
+}
+
+### EJEMPLO 2: Sesión de tren superior (sin ECI)
+{
+"dia_semana": "martes",
+"enfoque_muscular": "tren superior",
+"ejercicios": [
+{
+"nombre": "Press banca mancuernas",
+"tipo": "principal",
+"sets": 4,
+"reps": "8-12",
+"RIR": "1-2",
+"tempo": "3:0:1:1",
+"descanso_s": 90,
+"notas": "Descenso controlado"
+},
+{
+"nombre": "Remo con mancuernas",
+"tipo": "principal",
+"sets": 4,
+"reps": "8-12",
+"RIR": "1-2",
+"tempo": "3:0:1:1",
+"descanso_s": 90,
+"notas": "Espalda neutra"
+}
+],
+"duracion_estimada_min": 40
+}
+
+## FORMATO DE SALIDA
+{format_instructions}
+
+## ADVERTENCIAS (La rutina será RECHAZADA si fallas)
+- Rutina DEBE usar valores EXACTOS de {principios} (RIR, tempo) en ejercicios principales.
+- Rutina DEBE incluir TODOS los ECIs de {principios}.
+-  Rutina DEBE respetar `dias_preferidos` y `equipamiento_disponible`.
+-  `duracion_estimada_min` debe ser realista.
+
+Tu rol: APLICAR los principios del libro, no mejorarlos. El libro es la fuente de verdad. Ensambla la rutina.
