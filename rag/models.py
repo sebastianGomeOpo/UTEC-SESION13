@@ -11,7 +11,7 @@ IMPORTANTE: Todos los modelos usan Field() con descripciones para guiar al LLM.
 from typing import List, Optional
 from pydantic import BaseModel, Field
 from datetime import datetime
-
+from pydantic import ConfigDict
 
 # ============================================================================
 # MODELOS DE EXTRACCIÓN RAG (Paso R: Recuperar Principios)
@@ -43,7 +43,7 @@ class ECI(BaseModel):
     )
     
     class Config:
-        frozen = False  # Permitir modificación (ej. ajustar sets)
+        model_config = ConfigDict(frozen=False)
 
 
 class PrincipiosExtraidos(BaseModel):
@@ -79,7 +79,7 @@ class PrincipiosExtraidos(BaseModel):
     )
     
     class Config:
-        frozen = True  # Inmutable - los principios del libro no cambian
+        model_config = ConfigDict(frozen=False)
 
 
 # ============================================================================
@@ -132,7 +132,7 @@ class Sesion(BaseModel):
         description="Grupo muscular principal (ej: 'tren superior', 'pierna', 'full body')"
     )
     ejercicios: List[Ejercicio] = Field(
-        min_items=1,
+        min_length=1,
         description="Lista de ejercicios en esta sesión. Mínimo 1 ejercicio."
     )
     duracion_estimada_min: int = Field(
@@ -154,7 +154,7 @@ class RutinaActiva(BaseModel):
         description="Nombre de la rutina"
     )
     sesiones: List[Sesion] = Field(
-        min_items=1,
+        min_length=1,
         description="Lista de sesiones de entrenamiento. Mínimo 1 sesión."
     )
     principios_aplicados: PrincipiosExtraidos = Field(
@@ -172,8 +172,7 @@ class RutinaActiva(BaseModel):
     )
     
     class Config:
-        # Permitir modificación (ej. extender validez)
-        frozen = False
+        model_config = ConfigDict(frozen=False)
 
 
 # ============================================================================

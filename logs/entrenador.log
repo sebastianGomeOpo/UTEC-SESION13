@@ -1,0 +1,235 @@
+2025-10-26 17:28:25 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:28:26 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:28:30 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:28:30 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:28:30 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:28:30 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:28:30 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:28:30 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:28:30 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:28:30 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:28:30 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:28:31 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:28:31 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:28:31 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:28:31 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:28:31 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:28:31 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:28:31 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:28:31 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:28:31 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:28:32 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:28:32 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:28:32 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:28:32 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:28:32 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:28:32 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:28:32 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:28:32 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:28:32 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:28:33 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:28:33 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:28:33 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:28:33 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:28:33 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:28:33 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:28:33 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:28:33 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:28:33 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:28:34 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:28:34 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:28:34 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:28:34 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:28:34 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:28:34 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:28:34 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:28:34 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:28:34 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:36:12 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:36:12 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:36:16 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:36:16 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:36:16 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:36:16 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:36:16 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:36:16 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:36:16 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:36:16 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:36:16 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:36:17 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:36:17 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:36:17 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:36:17 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:36:17 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:36:17 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:36:17 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:36:17 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:36:17 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:36:18 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:36:18 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:36:18 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:36:18 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:36:18 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:36:18 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:36:18 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:36:18 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:36:18 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:36:19 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:36:19 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:36:19 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:36:19 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:36:19 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:36:19 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:36:19 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:36:19 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:36:19 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:36:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:36:20 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:36:20 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:36:20 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:36:20 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:36:20 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:36:20 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:36:20 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:36:20 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:37:02 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:37:03 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:37:06 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:37:06 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:37:06 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:37:06 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:37:06 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:37:06 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:37:06 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:37:06 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:37:06 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:37:07 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:37:07 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:37:07 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:37:07 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:37:07 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:37:07 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:37:07 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:37:07 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:37:07 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:37:08 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:37:08 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:37:08 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:37:08 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:37:08 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:37:08 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:37:08 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:37:08 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:37:08 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:37:09 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:37:09 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:37:09 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:37:09 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:37:09 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:37:09 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:37:09 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:37:09 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:37:09 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:37:10 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:37:10 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:37:10 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:37:10 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:37:10 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:37:10 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:37:10 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:37:10 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:37:10 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:13 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:14 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:17 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:17 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:17 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:17 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:17 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:17 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:17 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:17 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:17 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:18 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:18 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:18 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:18 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:18 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:18 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:18 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:18 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:18 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:19 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:19 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:19 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:19 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:19 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:19 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:19 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:19 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:19 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:20 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:20 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:31 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:32 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:34 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:34 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:34 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:34 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:34 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:34 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:34 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:34 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:34 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:35 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:35 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:35 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:35 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:35 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:35 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:35 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:35 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:35 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:36 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:36 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:36 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:36 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:36 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:36 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:36 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:36 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:36 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:37 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:37 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:37 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:37 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:37 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:37 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:37 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:37 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:37 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.
+2025-10-26 17:42:38 - rag.principle_extractor - INFO - PrincipleExtractor initialized.
+2025-10-26 17:42:38 - rag.principle_extractor - INFO - Building the principle extraction RAG chain...
+2025-10-26 17:42:38 - rag.principle_extractor - INFO - Loading prompt template from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\prompts\rag_principle_extractor.txt
+2025-10-26 17:42:38 - rag.principle_extractor - INFO - Prompt template loaded successfully.
+2025-10-26 17:42:38 - rag.vectorstore_manager - INFO - Loading existing vector store from: C:\Users\Usuario\Documents\UTEC\Agente Entrenador con tools\data\chroma_db
+2025-10-26 17:42:38 - rag.vectorstore_manager - INFO - ✅ Vector store loaded successfully.
+2025-10-26 17:42:38 - rag.principle_extractor - INFO - Retriever obtained from vector store.
+2025-10-26 17:42:38 - rag.principle_extractor - INFO - PromptTemplate instance created.
+2025-10-26 17:42:38 - rag.principle_extractor - INFO - ✅ Principle extraction RAG chain built successfully.

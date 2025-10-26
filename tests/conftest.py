@@ -80,7 +80,7 @@ def create_valid_routine(principles: PrincipiosExtraidos | Dict[str, Any], user_
     eci_ejercicios = []
     for eci_data in ecis_from_principles:
         eci_ejercicios.append(
-             Ejercicio(
+            Ejercicio(
                 nombre=eci_data.get("nombre_ejercicio", "ECI Desconocido"),
                 tipo="ECI",
                 sets=eci_data.get("sets", 3),

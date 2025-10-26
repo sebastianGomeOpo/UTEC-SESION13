@@ -5,7 +5,8 @@ from typing import Dict, Any
 # LangChain Imports
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import PydanticOutputParser, OutputParserException
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_core.exceptions import OutputParserException
 from langchain_core.runnables import RunnableSequence
 
 # Project Imports
