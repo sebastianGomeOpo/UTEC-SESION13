@@ -94,7 +94,7 @@ def save_routine(state: GraphState) -> GraphState:
     except (IOError, OSError, shutil.Error) as e:
         logger.exception(f"File system error saving routine for {user_id}: {e}")
         state["error"] = f"Error de archivo guardando rutina: {str(e)}"
-        state["step_completed"] = "save_routine_failed"
+        state["step_completed"] = "save_routine_error"
         # Attempt to restore from backup
         if backup_path and backup_path.exists() and original_content:
             try:
@@ -108,11 +108,11 @@ def save_routine(state: GraphState) -> GraphState:
     except json.JSONDecodeError as e:
         logger.exception(f"Error decoding existing JSON for user {user_id}: {e}")
         state["error"] = f"Archivo de usuario existente está corrupto: {str(e)}"
-        state["step_completed"] = "save_routine_failed"
+        state["step_completed"] = "save_routine_error"
     except Exception as e:
         logger.exception(f"An unexpected error occurred saving routine for user {user_id}: {e}")
         state["error"] = f"Error inesperado guardando rutina: {str(e)}"
-        state["step_completed"] = "save_routine_failed"
+        state["step_completed"] = "save_routine_error"
         # Attempt restore here too if backup was created before unexpected error
         if backup_path and backup_path.exists() and original_content:
             try:

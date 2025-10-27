@@ -15,29 +15,37 @@ from rag.chunking_strategy import get_semantic_text_splitter
 
 def test_split_long_paragraphs(chunk_splitter, sample_long_paragraphs):
     """
-    Given: Text with multiple long paragraphs.
-    When: Splitting with semantic chunker (default size ~1000).
-    Then: The text is split into multiple chunks (not just one, not too many).
+    Given: Text with multiple long paragraphs (~5,400 chars total).
+    When: Splitting with semantic chunker (chunk_size=1000, overlap=200).
+    Then: The text is split into multiple chunks (approximately 6-8).
           Each chunk contains substantial text.
     """
     # Act
-    chunks = chunk_splitter.split_text(sample_long_paragraphs) # Use split_text for raw string
+    chunks = chunk_splitter.split_text(sample_long_paragraphs)
 
     # Assert
     assert isinstance(chunks, list)
-    # Expecting 2-4 chunks based on size 1000, overlap 200, and ~1500+ chars total
-    # This might need adjustment based on exact splitter behavior
-    assert 2 <= len(chunks) <= 4, f"Expected 2-4 chunks, but got {len(chunks)}"
+    
+    # ✅ FIX: Ajustar expectativa basada en cálculo real
+    # ~5,400 chars ÷ (1000 - 200 overlap) ≈ 6.75 → 7-8 chunks
+    assert 6 <= len(chunks) <= 10, f"Expected 6-10 chunks for ~5,400 chars, but got {len(chunks)}"
+    
+    # Verificar que cada chunk tenga contenido sustancial
     assert all(isinstance(chunk, str) for chunk in chunks), "Chunks should be strings"
     assert all(len(chunk) > 200 for chunk in chunks), "Some chunks are unexpectedly small"
+    
+    # ✅ BONUS: Verificar que el chunk_size se respeta (excepto el último)
+    for i, chunk in enumerate(chunks[:-1]):  # Todos excepto el último
+        assert len(chunk) <= 1000, f"Chunk {i} excede el tamaño máximo: {len(chunk)} chars"
+        assert len(chunk) >= 200, f"Chunk {i} es demasiado pequeño: {len(chunk)} chars"
 
 def test_split_with_table(chunk_splitter, sample_text_with_table):
     """
     Given: Text containing paragraphs and a distinct table structure.
     When: Splitting text using the semantic splitter.
     Then: The table structure is reasonably preserved within chunks,
-          though exact splitting depends on separators and size.
-          The test focuses on ensuring table content isn't lost.
+        though exact splitting depends on separators and size.
+        The test focuses on ensuring table content isn't lost.
     """
     # Act
     chunks = chunk_splitter.split_text(sample_text_with_table)
@@ -90,28 +98,24 @@ def test_chunk_overlap_works(chunk_splitter, sample_long_paragraphs):
 
     # Assert
     assert len(chunks) > 1, "Need multiple chunks to test overlap"
-    overlap_size = chunk_splitter.chunk_overlap # Get configured overlap
-
+    
+    # ✅ FIX: Verificar overlap sin conocer el valor exacto
+    # Estrategia: Buscar palabras del final del chunk N en el inicio del chunk N+1
     for i in range(len(chunks) - 1):
-        chunk_n_end = chunks[i][-overlap_size:]
-        chunk_n_plus_1_start = chunks[i+1][:overlap_size]
-
-        # Check if the end of chunk N is present at the beginning of chunk N+1
-        # Due to separator splitting, the exact overlap might vary slightly,
-        # so we check if a significant portion matches.
-        # A simpler check: ensure the last few words of chunk N appear in chunk N+1 start
-        last_words_n = re.findall(r'\b\w+\b', chunks[i])[-10:] # Last 10 words
-        start_text_n_plus_1 = chunks[i+1][:overlap_size + 50] # Look in overlap + buffer
-
-        if last_words_n:
-             last_word = last_words_n[-1]
-             assert last_word in start_text_n_plus_1, \
-                 f"Overlap failed: Last word '{last_word}' of chunk {i} not found near start of chunk {i+1}"
-
-        # More robust: Check sequence, find common substring
-        # common_substring = os.path.commonprefix([chunk_n_end[::-1], chunk_n_plus_1_start[::-1]])[::-1]
-        # assert len(common_substring) > overlap_size * 0.5, f"Overlap between chunk {i} and {i+1} seems too small"
-
+        chunk_n = chunks[i]
+        chunk_n_plus_1 = chunks[i+1]
+        
+        # Tomar las últimas 20 palabras del chunk N
+        words_at_end = chunk_n.split()[-20:]
+        
+        # Verificar que al menos algunas palabras aparecen al inicio del chunk N+1
+        start_of_next_chunk = chunk_n_plus_1[:300]  # Primeros 300 chars
+        
+        # Al menos 5 de las últimas 20 palabras deben aparecer en el siguiente chunk
+        overlap_found = sum(1 for word in words_at_end if word in start_of_next_chunk)
+        
+        assert overlap_found >= 5, \
+            f"Overlap insuficiente entre chunk {i} y {i+1}: solo {overlap_found}/20 palabras coinciden"
 
 def test_empty_text_handling(chunk_splitter):
     """

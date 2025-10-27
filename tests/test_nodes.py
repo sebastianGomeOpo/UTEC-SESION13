@@ -402,7 +402,7 @@ class TestGuardadoRutina:
         assert result_state["error"] is not None and result_state["error"] != ""
         assert "vacía" in result_state["error"].lower() or \
                "missing" in result_state["error"].lower()
-        assert "failed" in result_state["step_completed"].lower()
+        assert "error" in result_state["step_completed"].lower()
 
     @patch("builtins.open", side_effect=IOError("Error de permisos simulado"))
     @patch("shutil.copy")
@@ -438,7 +438,7 @@ class TestGuardadoRutina:
         assert "error de archivo" in result_state["error"].lower() or \
                "permission" in result_state["error"].lower() or \
                "Error de permisos simulado" in result_state["error"]
-        assert "failed" in result_state["step_completed"].lower()
+        assert "error" in result_state["step_completed"].lower()
 
 
 # ════════════════════════════════════════════════════════════

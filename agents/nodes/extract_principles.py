@@ -58,9 +58,10 @@ def extract_principles(state: GraphState) -> GraphState:
             logger.error("CRITICAL: Extracted principles lack source citations!")
             state["error"] = "Alucinación detectada: principios extraídos sin citas de fuente."
             state["step_completed"] = "extract_principles_error"
-            # Optional: Add debug info about the extracted principles without citations
-            state["debug_info"] = state.get("debug_info", {})
-            state["debug_info"]["principles_without_citations"] = principios.model_dump() # Pydantic V2
+            # ✅ FIX: Inicializar debug_info si es None
+            if state.get("debug_info") is None:
+                state["debug_info"] = {}
+            state["debug_info"]["principles_without_citations"] = principios.model_dump()
             return state
 
         # Optional: Confidence check (if your model provides it, adapt as needed)
