@@ -1,3 +1,23 @@
 .env
 data/books/entrenamiento.pdf
 data/chroma_db/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+.env/
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore log files
+logs/
+*.log

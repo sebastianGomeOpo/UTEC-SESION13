@@ -1,16 +1,18 @@
 from pathlib import Path
+from typing import Dict, Any
 
 # LangChain Imports
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.runnables import RunnablePassthrough, RunnableSequence
+from langchain_core.runnables import RunnablePassthrough, RunnableSequence, RunnableLambda
 
 # Project Imports
 from config.settings import Config
-from rag.models import PrincipiosExtraidos  # Assuming PrincipiosExtraidos is in rag.models
+from rag.models import PrincipiosExtraidos
 from rag.vectorstore_manager import VectorStoreManager
 from utils.logger import setup_logger
+
 
 class PrincipleExtractor:
     """
@@ -55,6 +57,61 @@ class PrincipleExtractor:
             self.logger.error(f"Error reading prompt file {prompt_file_path}: {e}", exc_info=True)
             raise
 
+    def _build_retrieval_query(self, perfil_usuario: Dict[str, Any]) -> str:
+        """
+        Construye una query textual para el retriever basándose en el perfil del usuario.
+        
+        Args:
+            perfil_usuario: Diccionario con datos del usuario
+            
+        Returns:
+            str: Query optimizada para búsqueda semántica
+        """
+        # Extraer campos relevantes
+        nivel = perfil_usuario.get("level", "")
+        objetivo = perfil_usuario.get("objetivo", "")
+        restricciones = perfil_usuario.get("restricciones", [])
+        
+        # Construir query
+        query_parts = []
+        
+        if nivel:
+            query_parts.append(f"nivel {nivel}")
+        
+        if objetivo:
+            query_parts.append(f"objetivo {objetivo}")
+        
+        if restricciones:
+            restricciones_str = " ".join(restricciones)
+            query_parts.append(f"restricciones {restricciones_str}")
+        
+        query = " ".join(query_parts)
+        
+        self.logger.debug(f"Built retrieval query: '{query}'")
+        return query
+
+    def _expand_profile(self, perfil_usuario: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Expande el perfil del usuario en variables individuales para el template.
+        
+        Args:
+            perfil_usuario: Diccionario con datos del usuario
+            
+        Returns:
+            Dict con campos expandidos (nivel, objetivo, restricciones)
+        """
+        restricciones = perfil_usuario.get("restricciones", [])
+        restricciones_str = ", ".join(restricciones) if restricciones else "ninguna"
+        
+        expanded = {
+            "nivel": perfil_usuario.get("level", "intermedio"),
+            "objetivo": perfil_usuario.get("objetivo", "hipertrofia"),
+            "restricciones": restricciones_str
+        }
+        
+        self.logger.debug(f"Expanded profile: {expanded}")
+        return expanded
+
     def get_extraction_chain(self) -> RunnableSequence:
         """
         Builds and returns the LangChain Expression Language (LCEL) chain
@@ -75,24 +132,39 @@ class PrincipleExtractor:
             self.logger.info("Retriever obtained from vector store.")
 
             # 3. Create Prompt Template Instance
+            # input_variables deben coincidir con las variables en el template
             prompt_template = PromptTemplate(
                 template=raw_prompt,
-                input_variables=["perfil_usuario", "contexto_libro"], # Corrected input variable name
+                input_variables=["contexto_libro", "nivel", "objetivo", "restricciones"],
                 partial_variables={"format_instructions": self.parser.get_format_instructions()}
             )
             self.logger.info("PromptTemplate instance created.")
 
-            # 4. Define the LCEL Chain
-            # Passes user profile directly, retrieves context based on user profile query implicitly
+            # ════════════════════════════════════════════════════════════════
+            # 4. CADENA LCEL CORREGIDA
+            # ════════════════════════════════════════════════════════════════
+            # Paso 1: Agregar contexto_libro mediante retrieval
+            # Paso 2: Expandir perfil en variables individuales (nivel, objetivo, restricciones)
+            # Paso 3: Formatear prompt
+            # Paso 4: Invocar LLM
+            # Paso 5: Parsear respuesta
+            
             chain = (
-                {
-                    "contexto_libro": retriever, # Context fetched via retriever
-                    "perfil_usuario": RunnablePassthrough() # User profile passed through
-                 }
+                # Paso 1: Agregar contexto del libro
+                RunnablePassthrough.assign(
+                    contexto_libro=RunnableLambda(self._build_retrieval_query) | retriever
+                )
+                # Paso 2: Expandir perfil en variables individuales
+                | RunnableLambda(lambda x: {
+                    "contexto_libro": x["contexto_libro"],
+                    **self._expand_profile(x)
+                })
+                # Paso 3-5: Prompt → LLM → Parser
                 | prompt_template
                 | self.llm
                 | self.parser
             )
+            
             self.logger.info("✅ Principle extraction RAG chain built successfully.")
             return chain
 

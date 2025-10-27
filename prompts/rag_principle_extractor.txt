@@ -26,13 +26,12 @@ Analista Experto en Ciencias del Entrenamiento. Tu tarea es extraer variables de
 - Descanso: 90 segundos
 
 **Salida JSON:**
-{
+{{{{
   "intensidad_RIR": "1-2",
   "descanso_series_s": 90,
   "cadencia_tempo": "3:0:1:1",
   "citas_fuente": ["Página 138 (Tabla 20)"]
-  // ... otros campos en null
-}
+}}}}
 
 ---
 **Contexto (Fragmento):**
@@ -42,29 +41,27 @@ Analista Experto en Ciencias del Entrenamiento. Tu tarea es extraer variables de
 - Objetivo: Activación glútea para estabilizar rodilla
 
 **Salida JSON (Usuario con restricción "rodilla"):**
-{
+{{{{
   "ECI_recomendados": [
-    {
+    {{{{
       "nombre_ejercicio": "Puente de Glúteo (Trabajo compensatorio 22)",
       "motivo": "Detectado 'dolor anterior' o debilidad en rodilla - requiere activación glútea",
       "fuente_cita": "Página 107 (Tabla 16)",
       "sets": 3,
       "reps": "15"
-    }
+    }}}}
   ],
   "citas_fuente": ["Página 107 (Tabla 16)"]
-  // ... otros campos en null
-}
+}}}}
 
 ---
 **Contexto (Fragmento):**
 [Página 50] ...principios de fuerza máxima...
 
 **Salida JSON (Usuario con objetivo "hipertrofia"):**
-{
-  // ... todos los campos en null
+{{{{
   "citas_fuente": []
-}
+}}}}
 
 ---
 ## FORMATO DE SALIDA (JSON)
