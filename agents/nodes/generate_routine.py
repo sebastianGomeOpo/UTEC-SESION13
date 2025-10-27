@@ -41,7 +41,7 @@ def _validate_generated_routine(rutina: RutinaActiva, principios: PrincipiosExtr
                 # Example: if not _is_rep_range_compatible(ejercicio.reps, principios.rango_repeticiones): return "Reps inconsistentes"
 
                 if ejercicio.tempo != principios.cadencia_tempo:
-                     return (f"Ejercicio '{ejercicio.nombre}' (Sesión {i+1}) tiene tempo='{ejercicio.tempo}', "
+                    return (f"Ejercicio '{ejercicio.nombre}' (Sesión {i+1}) tiene tempo='{ejercicio.tempo}', "
                             f"pero los principios requieren tempo='{principios.cadencia_tempo}'.")
 
     # Validate against logistics (example: duration)
@@ -56,8 +56,8 @@ def _validate_generated_routine(rutina: RutinaActiva, principios: PrincipiosExtr
     # Check if *average* exceeds max, or check *each session*
     for sesion in rutina.sesiones:
         if sesion.duracion_estimada_min > duracion_max_min:
-             return (f"Sesión '{sesion.dia_semana}' ({sesion.duracion_estimada_min} min) "
-                     f"excede la duración máxima permitida ({duracion_max_min} min).")
+            return (f"Sesión '{sesion.dia_semana}' ({sesion.duracion_estimada_min} min) "
+                    f"excede la duración máxima permitida ({duracion_max_min} min).")
 
     # Validate inclusion of ECIs
     required_eci_names = {eci.nombre_ejercicio for eci in principios.ECI_recomendados}
@@ -110,31 +110,29 @@ def generate_routine(state: GraphState) -> GraphState:
         prompt_file_path = config.PROMPTS_DIR / "routine_assembler.txt"
         logger.info(f"Loading routine assembler prompt from: {prompt_file_path}")
         if not prompt_file_path.exists():
-             state["error"] = f"Archivo de prompt no encontrado: {prompt_file_path}"
-             state["step_completed"] = "generate_routine_error"
-             return state
+            state["error"] = f"Archivo de prompt no encontrado: {prompt_file_path}"
+            state["step_completed"] = "generate_routine_error"
+            return state
         raw_prompt_template = prompt_file_path.read_text(encoding="utf-8")
 
         # 2. Build LCEL Chain
         prompt_template = ChatPromptTemplate.from_template(raw_prompt_template)
-        llm = ChatOpenAI(model=config.LLM_MODEL_ASSEMBLE, temperature=0.0) # Low temp for consistency
+        llm = ChatOpenAI(model=config.LLM_MODEL_ASSEMBLE, temperature=0.0)
         output_parser = PydanticOutputParser(pydantic_object=RutinaActiva)
 
+        # Cadena tradicional: Prompt → LLM → Parser (más estable)
         chain: RunnableSequence = prompt_template | llm | output_parser
         logger.info("Routine generation chain built.")
 
         # 3. Prepare Prompt Variables
-        # Preferencias logisticas might be nested or direct, handle gracefully
         preferencias_logistica = perfil_usuario.get("preferencias_logistica", {})
         prompt_variables = {
-            "principios": principios.model_dump(), # Pass principles as dict
-            "perfil": perfil_usuario, # Pass full profile
-            "preferencias": preferencias_logistica # Pass logistics explicitly if needed by prompt
-            # Pass duration explicitly if the prompt requires it directly, else rely on perfil
-            # "duracion_maxima": preferencias_logistica.get("duracion_sesion_min", 60)
+            "principios": principios.model_dump(),
+            "perfil": perfil_usuario,
+            "preferencias": preferencias_logistica,
+            "format_instructions": output_parser.get_format_instructions()  # ✅ CRÍTICO
         }
         logger.debug(f"Prompt variables prepared: {list(prompt_variables.keys())}")
-
 
         # 4. Invoke Chain with Retry Logic
         generated_routine: RutinaActiva | None = None
@@ -156,17 +154,17 @@ def generate_routine(state: GraphState) -> GraphState:
                 last_exception = e
                 # Depending on error type, might break early or retry
                 if "timeout" in str(e).lower(): # Example of breaking early on timeout
-                     break
+                    break
                 time.sleep(1)
 
         if not generated_routine:
             logger.error(f"Failed to generate valid routine after {MAX_RETRIES} attempts.")
             error_detail = str(last_exception) if last_exception else "Unknown error during generation."
             if isinstance(last_exception, OutputParserException):
-                 state["error"] = f"LLM no retornó JSON válido después de {MAX_RETRIES} intentos: {error_detail}"
+                state["error"] = f"LLM no retornó JSON válido después de {MAX_RETRIES} intentos: {error_detail}"
             else:
-                 state["error"] = f"Error generando rutina después de {MAX_RETRIES} intentos: {error_detail}"
-            state["step_completed"] = "generate_routine_failed"
+                state["error"] = f"Error generando rutina después de {MAX_RETRIES} intentos: {error_detail}"
+            state["step_completed"] = "generate_routine_error"
             return state
 
         # 5. Validate Generated Routine
@@ -174,7 +172,7 @@ def generate_routine(state: GraphState) -> GraphState:
         if validation_error:
             logger.error(f"Generated routine failed validation: {validation_error}")
             state["error"] = f"Validación fallida: {validation_error}"
-            state["step_completed"] = "generate_routine_failed"
+            state["step_completed"] = "generate_routine_error"
             # Add debug info about the invalid routine
             state["debug_info"] = state.get("debug_info", {})
             state["debug_info"]["invalid_generated_routine"] = generated_routine.model_dump()
@@ -186,20 +184,22 @@ def generate_routine(state: GraphState) -> GraphState:
         state["rutina_final"] = generated_routine
         state["step_completed"] = "routine_generated" # Corrected step name
         # Add metadata
+        # Add metadata - Asegurar que debug_info existe
+        if not isinstance(state.get("debug_info"), dict):
+            state["debug_info"] = {}
         metadata = {
             "tiempo_generacion_segundos": round(generation_time, 2),
             "modelo_usado": config.LLM_MODEL_ASSEMBLE,
             "temperatura_llm": 0.0,
             "validation_passed": True
         }
-        state["debug_info"] = state.get("debug_info", {})
         state["debug_info"]["generation_metadata"] = metadata
 
 
     except FileNotFoundError as e:
-         logger.error(f"Prompt file error: {e}")
-         state["error"] = "Archivo de prompt de generación no encontrado."
-         state["step_completed"] = "generate_routine_error"
+        logger.error(f"Prompt file error: {e}")
+        state["error"] = "Archivo de prompt de generación no encontrado."
+        state["step_completed"] = "generate_routine_error"
     except Exception as e:
         logger.exception(f"An unexpected error occurred during routine generation: {e}")
         state["error"] = f"Error inesperado generando rutina: {str(e)}"

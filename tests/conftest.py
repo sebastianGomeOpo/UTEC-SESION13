@@ -277,34 +277,132 @@ def principle_extractor() -> PrincipleExtractor:
 @pytest.fixture
 def mock_openai_chat_completions(monkeypatch: pytest.MonkeyPatch):
     """
-    Mocks the ChatOpenAI().invoke call to return predefined responses
-    for testing generate_routine node without hitting the actual API.
+    Mocks the ChatOpenAI().invoke call.
+    
+    ✅ CORRECCIÓN FINAL (2025-10-26):
+    - Retorna AIMessage(content=json_string)
+    - Errores persisten durante reintentos (persist_error=True por defecto)
+    - Se limpian automáticamente entre tests vía yield
     """
-    mock_responses = {}
+    from langchain_core.messages import AIMessage
+    
+    # ✅ Estado del mock
+    mock_state = {
+        "force_error": None,
+        "persist_error": True,  # ← NUEVO: Controla si el error persiste
+        "custom_responses": {},
+        "call_count": 0
+    }
 
-    def add_mock_response(identifier: str, response: Any):
-        """Helper to set up specific mock responses."""
-        mock_responses[identifier] = response
+    def add_mock_response(identifier: str, response: Any, persist: bool = True):
+        """
+        Configura el comportamiento del mock.
+        
+        Args:
+            identifier: Identificador (para debugging)
+            response: Exception (se lanzará) o RutinaActiva
+            persist: Si True, error persiste en reintentos. Si False, solo una vez.
+        """
+        if isinstance(response, Exception):
+            print(f"[Mock Setup] Configured to raise: {response} (persist={persist})")
+            mock_state["force_error"] = response
+            mock_state["persist_error"] = persist  # ← NUEVO
+        else:
+            mock_state["custom_responses"][identifier] = response
 
-    def mock_invoke(*args, **kwargs):
-        prompt_input = args[0] if args else kwargs
+    def mock_invoke(self, *args, **kwargs):
+        """Mock implementation of ChatOpenAI.invoke()"""
+        mock_state["call_count"] += 1
+        call_num = mock_state["call_count"]
+        
+        # ================================================================
+        # PRIORIDAD 1: Error forzado
+        # ================================================================
+        if mock_state["force_error"] is not None:
+            error = mock_state["force_error"]
+            
+            # ✅ CORRECCIÓN: Solo limpiar si persist_error=False
+            if not mock_state["persist_error"]:
+                mock_state["force_error"] = None
+                print(f"[Mock OpenAI #{call_num}] Raising error (one-time): {error}")
+            else:
+                print(f"[Mock OpenAI #{call_num}] Raising error (persistent): {error}")
+                        
+            raise error
+        
+        # ================================================================
+        # PRIORIDAD 2: Procesar input normal
+        # ================================================================
+        # Extraer el input
+        if args:
+            prompt_input = args[0]
+        else:
+            prompt_input = kwargs.get('input', kwargs)
+        
+        # Convertir a string para análisis
+        if hasattr(prompt_input, 'to_messages'):
+            messages = prompt_input.to_messages()
+            content_str = str(messages)
+        elif hasattr(prompt_input, 'to_string'):
+            content_str = prompt_input.to_string()
+        else:
+            content_str = str(prompt_input)
+        
+        # ================================================================
+        # PRIORIDAD 3: Detectar tipo de solicitud y responder
+        # ================================================================
+        
+        # Caso A: Solicitud de generación de rutina
+        if 'principios' in content_str.lower() or 'perfil' in content_str.lower():
+            print(f"[Mock OpenAI #{call_num}] Detected routine generation request.")
+            
+            # Crear rutina válida
+            principios = create_valid_principles()
+            rutina = create_valid_routine(principios)
+            
+            # ✅ Serializar y envolver en AIMessage
+            json_output = rutina.model_dump_json(indent=2)
+            return AIMessage(content=json_output)
+        
+        # Caso B: Solicitud con "parse_error" (para test de parsing)
+        if 'parse_error' in content_str.lower():
+            print(f"[Mock OpenAI #{call_num}] Returning malformed JSON.")
+            # JSON intencionalmente roto
+            return AIMessage(content='{"nombre": "incomplete...')
+        
+        # Caso C: Response personalizada por identificador
+        for identifier, response in mock_state["custom_responses"].items():
+            if identifier in content_str:
+                print(f"[Mock OpenAI #{call_num}] Found custom response: {identifier}")
+                if isinstance(response, RutinaActiva):
+                    json_output = response.model_dump_json(indent=2)
+                    return AIMessage(content=json_output)
+                return response
+        
+        # ================================================================
+        # PRIORIDAD 4: Default - Rutina válida genérica
+        # ================================================================
+        print(f"[Mock OpenAI #{call_num}] No specific match. Returning default routine.")
+        principios = create_valid_principles()
+        rutina = create_valid_routine(principios)
+        json_output = rutina.model_dump_json(indent=2)
+        return AIMessage(content=json_output)
 
-        if isinstance(prompt_input, dict) and "principios" in prompt_input:
-            print("[Mock OpenAI] Returning predefined valid routine.")
-            principles_dict = prompt_input.get("principios", {})
-            principles_obj = PrincipiosExtraidos(**principles_dict) if principles_dict else create_valid_principles()
-            return create_valid_routine(principles_obj)
+    # ✅ Patchear el método de clase
+    monkeypatch.setattr(
+        "langchain_openai.chat_models.base.ChatOpenAI.invoke",
+        mock_invoke
+    )
 
-        elif isinstance(prompt_input, str) and "parse_error" in prompt_input:
-            print("[Mock OpenAI] Returning malformed JSON string to cause parse error.")
-            return MagicMock(content='{"rutina": "bad json", ...')
+    # ✅ YIELD: Retornar el helper y limpiar al final del test
+    yield add_mock_response
+    
+    # ✅ AUTO-LIMPIEZA: Resetear estado después de cada test
+    mock_state["force_error"] = None
+    mock_state["persist_error"] = True
+    mock_state["call_count"] = 0
+    print("[Mock Cleanup] State reset for next test")
 
-        print(f"[Mock OpenAI] No specific mock found for input: {prompt_input}. Returning default or error.")
-        return create_valid_routine(create_valid_principles())
-
-    monkeypatch.setattr("langchain_openai.ChatOpenAI.invoke", mock_invoke)
-
-    return add_mock_response
 
 @pytest.fixture
 def mock_principle_extractor_chain(monkeypatch: pytest.MonkeyPatch):
