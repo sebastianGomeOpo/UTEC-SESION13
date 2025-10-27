@@ -27,8 +27,9 @@ logger = setup_logger(__name__)
 # Mapeo de keywords para determinar la intención del usuario
 REQUEST_TYPE_KEYWORDS = {
     "crear_rutina": ["rutina", "crea", "genera", "nueva", "plan", "programa"],
+    # Se movió consultar_historial ANTES para priorizar sus keywords
+    "consultar_historial": ["historial", "muéstrame", "qué hice", "registro", "pasado", "hice"], # Añadido "hice"
     "registrar_ejercicio": ["registra", "anota", "ejercicio", "sentadilla", "press", "kg", "peso muerto"],
-    "consultar_historial": ["historial", "muéstrame", "qué hice", "registro", "ejercicios", "pasado"]
 }
 
 def determinar_request_type(user_input: str) -> str:
@@ -43,12 +44,24 @@ def determinar_request_type(user_input: str) -> str:
     """
     user_input_lower = user_input.lower()
 
-    for request_type, keywords in REQUEST_TYPE_KEYWORDS.items():
-        if any(kw in user_input_lower for kw in keywords):
-            logger.debug(f"Input '{user_input}' clasificado como: {request_type}")
-            return request_type
+    # --- CORRECCIÓN ---
+    # Verificar tipos en orden de especificidad o prioridad
+    # 1. Consultar historial (keywords más específicas como "historial", "muéstrame")
+    if any(kw in user_input_lower for kw in REQUEST_TYPE_KEYWORDS["consultar_historial"]):
+        logger.debug(f"Input '{user_input}' clasificado como: consultar_historial")
+        return "consultar_historial"
 
-    # Fallback
+    # 2. Registrar ejercicio (keywords como "registra", "anota", "kg")
+    if any(kw in user_input_lower for kw in REQUEST_TYPE_KEYWORDS["registrar_ejercicio"]):
+        logger.debug(f"Input '{user_input}' clasificado como: registrar_ejercicio")
+        return "registrar_ejercicio"
+
+    # 3. Crear rutina (keywords más generales como "rutina", "plan")
+    if any(kw in user_input_lower for kw in REQUEST_TYPE_KEYWORDS["crear_rutina"]):
+        logger.debug(f"Input '{user_input}' clasificado como: crear_rutina")
+        return "crear_rutina"
+
+    # Fallback si no coincide ninguno de los anteriores
     logger.debug(f"Input '{user_input}' no clasificado, tipo: unknown")
     return "unknown"
 
@@ -115,7 +128,7 @@ def main():
             
             # 4. Preparar estado inicial
             initial_state = create_initial_state(user_id, request_type)
-            initial_state["user_message"] = user_input # Para nodos legacy
+            initial_state["user_message"] = user_input # Para nodos legacy y potencialmente otros
 
             # 5. Invocar el grafo
             logger.info(f"Invocando grafo para {user_id} | Tipo: {request_type} | Msg: '{user_input}'")
@@ -142,7 +155,8 @@ def main():
         except Exception as e:
             print(f"\n❌ ERROR INESPERADO EN EL LOOP PRINCIPAL: {e}")
             logger.exception("Error fatal en el loop de main.py")
-            break
+            # Considerar si salir o continuar el loop
+            # break # Descomentar para salir en caso de error fatal
 
 if __name__ == "__main__":
     main()

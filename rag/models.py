@@ -9,9 +9,9 @@ Estos modelos definen los contratos de datos entre:
 IMPORTANTE: Todos los modelos usan Field() con descripciones para guiar al LLM.
 """
 from typing import List, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict # Importar ConfigDict
 from datetime import datetime
-from pydantic import ConfigDict
+# Se eliminó ConfigDict de pydantic (ya está arriba)
 
 # ============================================================================
 # MODELOS DE EXTRACCIÓN RAG (Paso R: Recuperar Principios)
@@ -20,7 +20,7 @@ from pydantic import ConfigDict
 class ECI(BaseModel):
     """
     Ejercicio Complementario Individualizado.
-    
+
     Extraído del libro cuando el usuario tiene restricciones físicas.
     Ejemplo: "Puente de Glúteo" para "rodilla izquierda".
     """
@@ -41,45 +41,54 @@ class ECI(BaseModel):
         default="8-12",
         description="Rango de repeticiones (formato string '8-12')"
     )
-    
-    class Config:
-        model_config = ConfigDict(frozen=False)
+
+    # --- CORRECCIÓN Pydantic V2 ---
+    model_config = ConfigDict(frozen=False)
 
 
 class PrincipiosExtraidos(BaseModel):
     """
     Variables de entrenamiento extraídas del libro mediante RAG.
-    
+
     Este modelo GARANTIZA que el LLM extraiga los principios correctos
     y los devuelva con citas verificables.
-    
+
     CRÍTICO: Cada campo debe tener una fuente en citas_fuente.
     """
-    intensidad_RIR: str = Field(
+    # --- CORRECCIÓN Pydantic V2 ---
+    # Hacer campos opcionales si el LLM podría retornar null/None
+    intensidad_RIR: Optional[str] = Field(
+        None, # Default None
         description="Rango de RIR (Reserve In Reserve) según el libro. Formato: '1-2' o '2-3'"
     )
-    rango_repeticiones: str = Field(
+    rango_repeticiones: Optional[str] = Field(
+        None, # Default None
         description="Rango de repeticiones recomendado. Formato: '6-15' o '8-12'"
     )
-    descanso_series_s: int = Field(
+    descanso_series_s: Optional[int] = Field(
+        None, # Default None
         description="Descanso entre series en segundos (ej: 90, 120)"
     )
-    cadencia_tempo: str = Field(
+    cadencia_tempo: Optional[str] = Field(
+        None, # Default None
         description="Tempo de ejecución. Formato: 'excéntrica:pausa:concéntrica:pausa' (ej: '3:0:1:1')"
     )
-    frecuencia_semanal: str = Field(
+    frecuencia_semanal: Optional[str] = Field(
+        None, # Default None
         description="Frecuencia recomendada por semana. Formato: '3-5 días' o '4 días'"
     )
     ECI_recomendados: List[ECI] = Field(
-        default_factory=list,
+        default_factory=list, # Mantiene default_factory
         description="Lista de ejercicios compensatorios individualizados según restricciones del usuario"
     )
+    # Citas sigue siendo requerida para validar contra alucinaciones
     citas_fuente: List[str] = Field(
-        description="Páginas exactas del libro de donde se extrajeron estos principios. Mínimo 1 cita."
+        # No añadir default=None aquí, debe ser una lista (puede estar vacía al inicio)
+        description="Páginas exactas del libro de donde se extrajeron estos principios. Mínimo 1 cita si hay otros campos poblados."
     )
-    
-    class Config:
-        model_config = ConfigDict(frozen=False)
+
+    # --- CORRECCIÓN Pydantic V2 ---
+    model_config = ConfigDict(frozen=False)
 
 
 # ============================================================================
@@ -145,7 +154,7 @@ class Sesion(BaseModel):
 class RutinaActiva(BaseModel):
     """
     Rutina de entrenamiento completa generada por el sistema.
-    
+
     CRÍTICO: Esta rutina incluye los principios_aplicados con citas,
     permitiendo auditoría de por qué se eligió cada parámetro.
     """
@@ -157,6 +166,7 @@ class RutinaActiva(BaseModel):
         min_length=1,
         description="Lista de sesiones de entrenamiento. Mínimo 1 sesión."
     )
+    # Principios aplicados debe seguir siendo PrincipiosExtraidos
     principios_aplicados: PrincipiosExtraidos = Field(
         description="Principios del libro que se usaron para crear esta rutina. INCLUYE CITAS."
     )
@@ -170,9 +180,9 @@ class RutinaActiva(BaseModel):
         le=12,
         description="Cuántas semanas es válida esta rutina antes de re-evaluar (1-12)"
     )
-    
-    class Config:
-        model_config = ConfigDict(frozen=False)
+
+    # --- CORRECCIÓN Pydantic V2 ---
+    model_config = ConfigDict(frozen=False)
 
 
 # ============================================================================
@@ -185,59 +195,60 @@ def validate_routine_against_principles(
 ) -> bool:
     """
     Valida que la rutina generada respete los principios del libro.
-    
+
     Verificaciones:
-    - RIR de ejercicios principales coincide con principios
-    - Tempo coincide con principios
+    - RIR de ejercicios principales coincide con principios (si existen)
+    - Tempo coincide con principios (si existen)
     - ECIs recomendados están presentes en la rutina
-    
+
     Args:
         rutina: Rutina generada
         principios: Principios extraídos del libro
-    
+
     Returns:
         True si válido, False si hay inconsistencias
-    
+
     Raises:
         ValueError: Si encuentra inconsistencias críticas
     """
     errors = []
-    
-    # Verificar RIR en ejercicios principales
+
+    # Verificar RIR y Tempo en ejercicios principales, solo si los principios los tienen
     for sesion in rutina.sesiones:
         for ejercicio in sesion.ejercicios:
             if ejercicio.tipo == "principal":
-                if ejercicio.RIR != principios.intensidad_RIR:
+                if principios.intensidad_RIR is not None and ejercicio.RIR != principios.intensidad_RIR:
                     errors.append(
                         f"Ejercicio '{ejercicio.nombre}' tiene RIR={ejercicio.RIR} "
                         f"pero principios dicen RIR={principios.intensidad_RIR}"
                     )
-                
-                if ejercicio.tempo != principios.cadencia_tempo:
+
+                if principios.cadencia_tempo is not None and ejercicio.tempo != principios.cadencia_tempo:
                     errors.append(
                         f"Ejercicio '{ejercicio.nombre}' tiene tempo={ejercicio.tempo} "
                         f"pero principios dicen tempo={principios.cadencia_tempo}"
                     )
-    
+
     # Verificar que ECIs recomendados estén presentes
-    eci_names = [eci.nombre_ejercicio for eci in principios.ECI_recomendados]
-    rutina_ejercicios = [
-        ej.nombre 
-        for sesion in rutina.sesiones 
+    # Asegurarse que principios.ECI_recomendados es una lista
+    eci_names = [eci.nombre_ejercicio for eci in (principios.ECI_recomendados or [])]
+    rutina_ejercicios = {
+        ej.nombre
+        for sesion in rutina.sesiones
         for ej in sesion.ejercicios
-    ]
-    
+    } # Usar un set para búsqueda eficiente
+
     for eci_name in eci_names:
         if eci_name not in rutina_ejercicios:
             errors.append(
                 f"ECI obligatorio '{eci_name}' no está en la rutina generada"
             )
-    
+
     if errors:
         raise ValueError(
             "Rutina inconsistente con principios:\n" + "\n".join(errors)
         )
-    
+
     return True
 
 

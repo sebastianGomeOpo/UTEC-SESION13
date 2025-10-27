@@ -5,10 +5,11 @@
 # -----------------------------------------------------------------------------
 
 from langgraph.graph import StateGraph, END
-from langgraph.graph import CompiledGraph
+# Se eliminó la importación de CompiledGraph (obsoleta)
 
 # Imports del proyecto
-from agents.graph_state import GraphState, PrincipiosExtraidos
+from agents.graph_state import GraphState
+from rag.models import PrincipiosExtraidos
 from utils.logger import setup_logger
 
 # Importar TODOS los nodos que usará el grafo
@@ -102,12 +103,12 @@ def route_after_generate(state: GraphState) -> str:
 # CONSTRUCTOR DEL GRAFO
 # -----------------------------------------------------------------------------
 
-def build_graph() -> CompiledGraph:
+def build_graph(): # <-- Se eliminó el type hint obsoleto '-> CompiledGraph'
     """
     Construye y compila el StateGraph C-R-G + Legacy.
 
     Returns:
-        CompiledGraph: El grafo compilado y listo para invocar.
+        Grafo compilado y listo para invocar.
         
     Raises:
         Exception: Si el grafo no puede compilarse.

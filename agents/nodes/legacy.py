@@ -41,16 +41,17 @@ def _parse_legacy_exercise(user_message: str) -> Dict[str, Any] | None:
     Parsea un string de formato libre a datos estructurados de ejercicio.
     Ej: "registra 5x5 de sentadilla con 100kg"
     """
-    # Patrón más flexible: (registra/anota) [SERIES]x[REPS] de [EJERCICIO] con [PESO]kg
+    # --- CORRECCIÓN REGEX ---
+    # Patrón más robusto para el nombre del ejercicio (acepta espacios y es greedy)
     pattern = (
         r"(registra|anota)\s+"
-        r"(\d+)\s*x\s*(\d+)\s+"  # 5x5
-        r"de\s+([\w\s]+?)\s+"     # de sentadilla
-        r"con\s+([\d\.]+)\s*kg"  # con 100kg (acepta decimales)
+        r"(\d+)\s*x\s*(\d+)\s+"      # 5x5
+        r"de\s+([\w ]+)\s+"          # de sentadilla (acepta espacios, greedy)
+        r"con\s+([\d\.]+)\s*kg"      # con 100kg (acepta decimales)
     )
-    
-    match = re.search(pattern, user_message.lower())
-    
+
+    match = re.search(pattern, user_message.lower().strip()) # Añadido strip() por si acaso
+
     if match:
         try:
             return {
@@ -60,10 +61,12 @@ def _parse_legacy_exercise(user_message: str) -> Dict[str, Any] | None:
                 "peso_kg": float(match.group(5)),
             }
         except (ValueError, IndexError):
-            logger.warning(f"Error de parsing en regex match: {match.groups()}")
+            logger.warning(f"Error de parsing en regex match: {match.groups()} para mensaje '{user_message}'")
             return None
-    
-    logger.warning(f"Mensaje legacy no coincide con patrón regex: {user_message}")
+
+    # --- CORRECCIÓN LOG ---
+    # Incluir el user_message en el log de advertencia
+    logger.warning(f"Mensaje legacy no coincide con patrón regex: '{user_message}'")
     return None
 
 def call_legacy_register(state: GraphState) -> GraphState:
@@ -88,8 +91,8 @@ def call_legacy_register(state: GraphState) -> GraphState:
         state["step_completed"] = "call_legacy_register_error"
         return state
 
-    if not UserContext or not set_user_context or not registrar_ejercicio:
-        state["error"] = "Componentes legacy (UserContext, registrar_ejercicio) no importados."
+    if not UserContext or not set_user_context or not registrar_ejercicio or not EjercicioEstructurado:
+        state["error"] = "Componentes legacy (UserContext, tools) no importados o no disponibles."
         state["step_completed"] = "call_legacy_register_error"
         logger.error(state["error"])
         return state
@@ -97,25 +100,26 @@ def call_legacy_register(state: GraphState) -> GraphState:
     try:
         # 1. Parsear el mensaje
         parsed_data = _parse_legacy_exercise(user_message)
-        
+
         if not parsed_data:
-            logger.warning(f"Formato no reconocido para registro: {user_message}")
+            # --- CORRECCIÓN LOG --- (Ya corregido en _parse_legacy_exercise)
+            # logger.warning(f"Formato no reconocido para registro: {user_message}") # Redundante
             state["error"] = "Formato no reconocido. Usa: 'Registra 5x5 de sentadilla con 100kg'"
             state["step_completed"] = "call_legacy_register_error"
             return state
 
         # 2. Configurar el contexto legacy
-        # Esto es CRÍTICO para que la herramienta legacy funcione
         logger.debug(f"Configurando UserContext legacy para: {user_id}")
         context = UserContext(user_id=user_id)
         set_user_context(context)
 
-        # 3. Preparar datos y llamar a la herramienta
+        # 3. Preparar datos y llamar a la herramienta usando .invoke()
         ejercicio_data = EjercicioEstructurado(**parsed_data)
-        
+
         logger.info(f"Invocando herramienta legacy registrar_ejercicio para {user_id}")
-        respuesta_tool = registrar_ejercicio(datos_ejercicio=ejercicio_data)
-        
+        # --- CORRECCIÓN TOOL CALL ---
+        respuesta_tool = registrar_ejercicio.invoke({"datos_ejercicio": ejercicio_data})
+
         # 4. Éxito
         state["respuesta_usuario"] = respuesta_tool # La herramienta ya devuelve "✅ Registrado: ..."
         state["step_completed"] = "call_legacy_register"
@@ -156,22 +160,22 @@ def call_legacy_query(state: GraphState) -> GraphState:
         return state
 
     if not UserContext or not set_user_context or not consultar_historial:
-        state["error"] = "Componentes legacy (UserContext, consultar_historial) no importados."
+        state["error"] = "Componentes legacy (UserContext, consultar_historial) no importados o no disponibles."
         state["step_completed"] = "call_legacy_query_error"
         logger.error(state["error"])
         return state
-        
+
     try:
         # 1. Configurar el contexto legacy
         logger.debug(f"Configurando UserContext legacy para: {user_id}")
         context = UserContext(user_id=user_id)
         set_user_context(context)
 
-        # 2. Llamar a la herramienta
-        # Usamos un default razonable para 'ultimos_n'
+        # 2. Llamar a la herramienta usando .invoke()
         logger.info(f"Invocando herramienta legacy consultar_historial para {user_id}")
-        respuesta_tool = consultar_historial(ultimos_n=7)
-        
+        # --- CORRECCIÓN TOOL CALL ---
+        respuesta_tool = consultar_historial.invoke({"ultimos_n": 7})
+
         # 3. Éxito
         state["respuesta_usuario"] = respuesta_tool # La herramienta ya devuelve el historial formateado
         state["step_completed"] = "call_legacy_query"
