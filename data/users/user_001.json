@@ -1,7 +1,7 @@
 {
   "user_id": "user_001",
   "name": "Juan",
-  "level": "intermedio",
+  "level": "avanzado",
   "workout_count": 15,
   "objetivo": "fuerza",
   "frecuencia_semanal": 5,
@@ -11,20 +11,19 @@
     "Dominadas"
   ],
   "restricciones": [
-    "rodilla izquierda"
+    "sobre peso"
   ],
   "created_at": "2024-08-15",
   "last_login": "2025-10-22",
   "preferencias_logistica": {
     "equipamiento_disponible": "gimnasio completo",
     "dias_preferidos": [
-      "lunes",
-      "martes",
       "miercoles",
       "viernes",
-      "sabado"
+      "sabado",
+      "domingo"
     ],
-    "duracion_sesion_min": 75
+    "duracion_sesion_min": 90
   },
   "rutina_activa": {
     "nombre": "Rutina de Fuerza Intermedia para Juan",

@@ -22,5 +22,13 @@
     "series": 5,
     "repeticiones": 5,
     "peso_kg": 40.0
+  },
+  {
+    "timestamp": "2025-10-27T22:43:58.969829",
+    "user_id": "user_001",
+    "ejercicio": "deadlift",
+    "series": 1,
+    "repeticiones": 10,
+    "peso_kg": 120.0
   }
 ]
