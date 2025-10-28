@@ -34,6 +34,15 @@ def _validate_generated_routine(rutina: RutinaActiva, principios: PrincipiosExtr
         for j, ejercicio in enumerate(sesion.ejercicios):
             # Validate against principles (only for 'principal' type for flexibility)
             if ejercicio.tipo == "principal":
+                
+                # --- INICIO DE VALIDACIÓN DE PRINCIPIOS (Manejo de None) ---
+                # Esta validación ahora debe ser robusta ante un None de RAG
+                if principios.intensidad_RIR is None:
+                    return f"Principios incompletos: 'intensidad_RIR' es None."
+                if principios.cadencia_tempo is None:
+                    return f"Principios incompletos: 'cadencia_tempo' es None."
+                # --- FIN DE VALIDACIÓN DE PRINCIPIOS ---
+
                 if ejercicio.RIR != principios.intensidad_RIR:
                     return (f"Ejercicio '{ejercicio.nombre}' (Sesión {i+1}) tiene RIR='{ejercicio.RIR}', "
                             f"pero los principios requieren RIR='{principios.intensidad_RIR}'.")
@@ -173,8 +182,13 @@ def generate_routine(state: GraphState) -> GraphState:
             logger.error(f"Generated routine failed validation: {validation_error}")
             state["error"] = f"Validación fallida: {validation_error}"
             state["step_completed"] = "generate_routine_error"
-            # Add debug info about the invalid routine
-            state["debug_info"] = state.get("debug_info", {})
+            
+            # --- ✅ INICIO DE CORRECCIÓN (Problema 2) ---
+            # Asegurarse de que debug_info exista antes de asignarle una clave
+            if state.get("debug_info") is None:
+                state["debug_info"] = {}
+            # --- FIN DE CORRECCIÓN ---
+            
             state["debug_info"]["invalid_generated_routine"] = generated_routine.model_dump()
             return state
 
@@ -183,10 +197,13 @@ def generate_routine(state: GraphState) -> GraphState:
         logger.info(f"Successfully generated and validated routine in {generation_time:.2f} seconds.")
         state["rutina_final"] = generated_routine
         state["step_completed"] = "routine_generated" # Corrected step name
-        # Add metadata
+        
         # Add metadata - Asegurar que debug_info existe
+        # --- ✅ INICIO DE CORRECCIÓN (Problema 2) ---
         if not isinstance(state.get("debug_info"), dict):
             state["debug_info"] = {}
+        # --- FIN DE CORRECCIÓN ---
+
         metadata = {
             "tiempo_generacion_segundos": round(generation_time, 2),
             "modelo_usado": config.LLM_MODEL_ASSEMBLE,

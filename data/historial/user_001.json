@@ -14,5 +14,13 @@
     "series": 5,
     "repeticiones": 20,
     "peso_kg": 100.0
+  },
+  {
+    "timestamp": "2025-10-27T22:32:07.013914",
+    "user_id": "user_001",
+    "ejercicio": "sentadilla",
+    "series": 5,
+    "repeticiones": 5,
+    "peso_kg": 40.0
   }
 ]

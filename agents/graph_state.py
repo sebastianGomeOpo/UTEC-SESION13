@@ -14,11 +14,12 @@ class GraphState(TypedDict, total=False):
     Estado del grafo LangGraph.
     
     Flujo de datos:
-    1. Inputs: user_id, request_type
+    1. Inputs: user_id, request_type, user_message
     2. Paso C (Contexto): perfil_usuario, preferencias_logistica
     3. Paso R (Recuperar): principios_libro
     4. Paso G (Generar): rutina_final
-    5. Control: step_completed, error, timestamp
+    5. Outputs: respuesta_usuario
+    6. Control: step_completed, error, timestamp
     
     IMPORTANTE: 
     - total=False permite que campos sean opcionales
@@ -33,7 +34,21 @@ class GraphState(TypedDict, total=False):
     """ID del usuario (ej: 'user_001', 'default')"""
     
     request_type: str
-    """Tipo de petición: 'crear_rutina' | 'consultar_historial' | 'actualizar_perfil'"""
+    """Tipo de petición: 'crear_rutina' | 'consultar_historial' | 'registrar_ejercicio'"""
+    
+    user_message: Optional[str]
+    """
+    Mensaje crudo del usuario desde la CLI.
+    Usado por:
+    - main.py: Asigna el input del usuario
+    - agents/nodes/legacy.py: Parsea formato para registro de ejercicios
+    - Sistema de logging: Trazabilidad de requests
+    
+    Ejemplo: "registra 5x5 de sentadilla con 100kg"
+    
+    CRÍTICO: Este campo debe estar declarado para que se propague correctamente
+    a través del grafo. Sin él, los nodos legacy reciben cadena vacía.
+    """
     
     # ========================================
     # PASO C: CONTEXTO (llenado por load_context)
@@ -73,6 +88,33 @@ class GraphState(TypedDict, total=False):
     """
     
     # ========================================
+    # OUTPUTS FINALES
+    # ========================================
+    respuesta_usuario: str
+    """
+    Respuesta final formateada para mostrar al usuario en la CLI.
+    
+    Poblada por:
+    - agents/nodes/handle_error.py: Mensajes de error amigables
+    - agents/nodes/save_routine.py: Confirmación de guardado
+    - agents/nodes/legacy.py (call_legacy_register): Confirmación de registro
+    - agents/nodes/legacy.py (call_legacy_query): Resultados de historial
+    
+    Formato típico:
+    - Éxito: "✅ Rutina guardada exitosamente en tu perfil."
+    - Error: "❌ Lo siento, hubo un problema: [mensaje amigable]"
+    - Legacy: "✅ Registrado: sentadilla - 5x5 @ 100kg"
+    
+    CRÍTICO: Este campo debe estar declarado para que main.py pueda leer
+    la respuesta final y mostrarla al usuario. Sin él, el resultado se pierde.
+    
+    Ejemplo de uso en main.py:
+        final_state = graph.invoke(initial_state)
+        response = final_state.get("respuesta_usuario", "Operación completada.")
+        print(f"🤖 {response}")
+    """
+    
+    # ========================================
     # CONTROL DE FLUJO
     # ========================================
     step_completed: str
@@ -84,13 +126,18 @@ class GraphState(TypedDict, total=False):
     - 'principles_extracted'
     - 'routine_generated'
     - 'saved'
+    - 'call_legacy_register'
+    - 'call_legacy_query'
     - 'error'
     """
     
     error: Optional[str]
     """
-    Mensaje de error si algo falló.
-    Si no es None, el flujo debe terminar o ir a nodo de error.
+    Mensaje de error técnico si algo falló.
+    Si no es None, el flujo debe ir a handle_error.
+    
+    IMPORTANTE: Los ROUTERS solo LEEN este campo para decidir routing.
+    Solo los NODOS pueden ESCRIBIR en este campo.
     """
     
     timestamp: str
@@ -126,6 +173,7 @@ def create_initial_state(user_id: str, request_type: str = "crear_rutina") -> Gr
     return GraphState(
         user_id=user_id,
         request_type=request_type,
+        user_message=None,  # ✅ Inicializar explícitamente
         perfil_usuario=None,
         preferencias_logistica=None,
         principios_libro=None,
@@ -133,7 +181,8 @@ def create_initial_state(user_id: str, request_type: str = "crear_rutina") -> Gr
         step_completed="",
         error=None,
         timestamp=datetime.now().isoformat(),
-        debug_info=None
+        debug_info=None,
+        respuesta_usuario=""  # ✅ Inicializar explícitamente
     )
 
 

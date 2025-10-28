@@ -57,34 +57,27 @@ class PrincipiosExtraidos(BaseModel):
     """
     # --- CORRECCIÓN Pydantic V2 ---
     # Hacer campos opcionales si el LLM podría retornar null/None
-    intensidad_RIR: Optional[str] = Field(
-        None, # Default None
-        description="Rango de RIR (Reserve In Reserve) según el libro. Formato: '1-2' o '2-3'"
+    intensidad_RIR: str = Field(
+        description="Rango de RIR (Reserve In Reserve) según el libro. Formato: '1-2' o '2-3'. REQUERIDO."
     )
-    rango_repeticiones: Optional[str] = Field(
-        None, # Default None
-        description="Rango de repeticiones recomendado. Formato: '6-15' o '8-12'"
+    rango_repeticiones: str = Field(
+        description="Rango de repeticiones recomendado. Formato: '6-15' o '8-12'. REQUERIDO."
     )
-    descanso_series_s: Optional[int] = Field(
-        None, # Default None
-        description="Descanso entre series en segundos (ej: 90, 120)"
+    descanso_series_s: int = Field(
+        description="Descanso entre series en segundos (ej: 90, 120). REQUERIDO."
     )
-    cadencia_tempo: Optional[str] = Field(
-        None, # Default None
-        description="Tempo de ejecución. Formato: 'excéntrica:pausa:concéntrica:pausa' (ej: '3:0:1:1')"
+    cadencia_tempo: str = Field(
+        description="Tempo de ejecución. Formato: 'excéntrica:pausa:concéntrica:pausa' (ej: '3:0:1:1'). REQUERIDO."
     )
-    frecuencia_semanal: Optional[str] = Field(
-        None, # Default None
-        description="Frecuencia recomendada por semana. Formato: '3-5 días' o '4 días'"
+    frecuencia_semanal: str = Field(
+        description="Frecuencia recomendada por semana. Formato: '3-5 días' o '4 días'. REQUERIDO."
     )
     ECI_recomendados: List[ECI] = Field(
-        default_factory=list, # Mantiene default_factory
-        description="Lista de ejercicios compensatorios individualizados según restricciones del usuario"
+        default_factory=list,
+        description="Lista de ejercicios compensatorios (puede estar vacía si no hay restricciones)"
     )
-    # Citas sigue siendo requerida para validar contra alucinaciones
     citas_fuente: List[str] = Field(
-        # No añadir default=None aquí, debe ser una lista (puede estar vacía al inicio)
-        description="Páginas exactas del libro de donde se extrajeron estos principios. Mínimo 1 cita si hay otros campos poblados."
+        description="Páginas exactas del libro. Mínimo 1 cita. REQUERIDO."
     )
 
     # --- CORRECCIÓN Pydantic V2 ---

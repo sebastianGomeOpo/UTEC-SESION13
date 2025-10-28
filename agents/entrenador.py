@@ -2,14 +2,17 @@
 # -----------------------------------------------------------------------------
 # Fase 5: Compilador del Grafo
 # Este archivo define el StateGraph que orquesta todo el flujo (C-R-G + Legacy).
+# 
+# CORRECCIONES APLICADAS (2025-10-27):
+# - ✅ Routers NO modifican el estado (solo leen y rutean)
+# - ✅ Toda validación movida a los nodos correspondientes
+# - ✅ Respeto total del patrón LangGraph
 # -----------------------------------------------------------------------------
 
 from langgraph.graph import StateGraph, END
-# Se eliminó la importación de CompiledGraph (obsoleta)
 
 # Imports del proyecto
 from agents.graph_state import GraphState
-from rag.models import PrincipiosExtraidos
 from utils.logger import setup_logger
 
 # Importar TODOS los nodos que usará el grafo
@@ -29,14 +32,20 @@ logger = setup_logger(__name__)
 
 
 # -----------------------------------------------------------------------------
-# FUNCIONES DE ROUTING (DECISIÓN)
+# FUNCIONES DE ROUTING (DECISIÓN) - SOLO LECTURA
 # -----------------------------------------------------------------------------
 
 def route_after_load(state: GraphState) -> str:
     """
     Router 1: Decide qué flujo tomar después de cargar el contexto.
-    (C-R-G, Legacy Register, Legacy Query, o Error).
+    
+    IMPORTANTE: Este router SOLO LEE el estado. Toda validación y 
+    modificación de estado ocurre en los NODOS.
+    
+    Returns:
+        str: Nombre del siguiente nodo a ejecutar
     """
+    # Si hay error previo, ir a manejo de errores
     if state.get("error"):
         logger.warning(f"Error detectado en load_context: {state['error']}")
         return "handle_error"
@@ -44,6 +53,7 @@ def route_after_load(state: GraphState) -> str:
     request_type = state.get("request_type", "unknown")
     logger.info(f"Routing after load, request_type: {request_type}")
     
+    # Rutear según tipo de request
     if request_type == "crear_rutina":
         return "extract_principles"
     elif request_type == "registrar_ejercicio":
@@ -51,59 +61,66 @@ def route_after_load(state: GraphState) -> str:
     elif request_type == "consultar_historial":
         return "call_legacy_query"
     else:
-        logger.error(f"Tipo de request desconocido: {request_type}")
-        state["error"] = f"Tipo de request desconocido: {request_type}"
+        # Caso de request_type desconocido
+        # NOTA: El nodo load_context ahora valida esto y setea el error
+        # Si llegamos aquí con "unknown", load_context ya debe haberlo manejado
+        logger.info(f"Routing unknown request_type '{request_type}' to error handler")
         return "handle_error"
+
 
 def route_after_extract(state: GraphState) -> str:
     """
-    Router 2: Valida los principios extraídos antes de generar.
-    (Previene alucinaciones y errores de RAG).
+    Router 2: Decide qué hacer después de extraer principios.
+    
+    IMPORTANTE: El nodo extract_principles YA validó:
+    - Que los principios no sean None
+    - Que contengan citas (anti-alucinación)
+    - Formato correcto de RIR, tempo, etc.
+    
+    Este router SOLO lee el estado y decide la ruta.
+    
+    Returns:
+        str: Nombre del siguiente nodo a ejecutar
     """
+    # Si el nodo extract_principles detectó algún error, rutear a handle_error
     if state.get("error"):
         logger.warning(f"Error detectado en extract_principles: {state['error']}")
         return "handle_error"
-        
-    principios: PrincipiosExtraidos | None = state.get("principios_libro")
-
-    if not principios:
-        logger.error("RAG retornó principios vacíos o nulos.")
-        state["error"] = "Principios del libro retornaron vacíos."
-        return "handle_error"
-
-    # CRÍTICO: Validación de alucinación (sin citas)
-    if not principios.citas_fuente:
-        logger.error("¡ALUCINACIÓN DETECTADA! Principios extraídos sin citas.")
-        state["error"] = "Alucinación detectada: principios extraídos sin citas de fuente."
-        # Opcional: guardar debug info
-        state["debug_info"] = state.get("debug_info", {})
-        state["debug_info"]["principles_without_citations"] = principios.model_dump()
-        return "handle_error"
     
-    logger.info("Principios validados (con citas). Procediendo a generar rutina.")
+    # Si no hay error, los principios están validados
+    logger.info("Principles validated successfully. Routing to routine generation.")
     return "generate_routine"
+
 
 def route_after_generate(state: GraphState) -> str:
     """
-    Router 3: Valida la rutina generada antes de guardarla.
+    Router 3: Decide qué hacer después de generar la rutina.
+    
+    IMPORTANTE: El nodo generate_routine YA validó:
+    - Que la rutina no sea None
+    - Que la rutina pase validaciones de negocio (RIR, tempo, ECIs)
+    - Que tenga al menos una sesión
+    
+    Este router SOLO lee el estado y decide la ruta.
+    
+    Returns:
+        str: Nombre del siguiente nodo a ejecutar
     """
+    # Si el nodo generate_routine detectó algún error, rutear a handle_error
     if state.get("error"):
         logger.warning(f"Error detectado en generate_routine: {state['error']}")
         return "handle_error"
-
-    if not state.get("rutina_final"):
-        logger.error("El nodo de generación no produjo una rutina_final.")
-        state["error"] = "Rutina generada está vacía."
-        return "handle_error"
-        
-    logger.info("Rutina generada y validada. Procediendo a guardar.")
+    
+    # Si no hay error, la rutina está validada
+    logger.info("Routine validated successfully. Routing to save routine.")
     return "save_routine"
+
 
 # -----------------------------------------------------------------------------
 # CONSTRUCTOR DEL GRAFO
 # -----------------------------------------------------------------------------
 
-def build_graph(): # <-- Se eliminó el type hint obsoleto '-> CompiledGraph'
+def build_graph():
     """
     Construye y compila el StateGraph C-R-G + Legacy.
 
@@ -185,6 +202,7 @@ def build_graph(): # <-- Se eliminó el type hint obsoleto '-> CompiledGraph'
     except Exception as e:
         logger.exception(f"❌ Error CRÍTICO compilando el grafo: {e}")
         raise
+
 
 # -----------------------------------------------------------------------------
 # EXPORTACIÓN
